@@ -1,0 +1,34 @@
+Welcome to GitHub
+
+Visual Studio Code : https://code.visualstudio.com/download
+
+In This Course we will cover
+
+1) Python
+2) Statistics
+3) Machine Learning (ML)
+4) Deep Learning (DL)
+5) Natural Language Processing (NLP)
+6) Generative AI
+7) Agentic AI
+8) MLOps
+9) Three Projects (ECommerce / Medical / Agent)
+10) Integrations (Spring Boot / Data Analytics / Data Science / ReactJS)
+
+
+IDE (Integrated Development Environment)
+Ex.
+        VSCode
+        Jupyter Notebook
+        Google Colab
+        Pycharm
+        ---
+        ---
+        ---
+    VSCode given by Microsoft and Open Source IDE
+
+    website : https://code.visualstudio.com/download
+
+download and install python
+
+website : https://www.python.org/downloads/
