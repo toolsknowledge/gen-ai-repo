@@ -1,0 +1,16 @@
+numpy
+pandas
+openpyxl
+matplotlib
+tensorflow
+
+scikit-learn
+opencv-python
+kaggle==1.5.16
+Flask
+jupyter
+
+
+fastapi
+uvicorn
+motor
