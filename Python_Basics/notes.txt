@@ -1,0 +1,157 @@
+Python
+******
+    - High Level Interpreted Programming Language
+
+    - Python - AI Applications
+               ML
+               DL
+               NLP
+               Gen AI
+               Agents
+
+    1) variables
+        - store the data
+        Ex.
+            str = "AshokIT"
+            print(str)
+
+    2) functions
+        business logic
+        reuse the business logic
+
+    3) OOPS
+        Object Oriented Programming System
+        1) class
+        2) Object
+        3) encapsulation
+        4) polymorphism
+        5) inheritance
+        ---
+        ---
+        ---
+
+    4) Libraries
+        a) numpy
+            used to perform mathematical operations
+
+        b) pandas
+            read the data from excel,csv files,...
+            tabular data
+        
+        c) matplotlib
+            visulization
+            Ex.
+                Line
+                Bar
+                Pie
+                Scatter
+                ---
+                ---
+                ---
+        d) seaborn
+                Rich visulization with Styles
+                matplotlib --> seaborn
+
+ML (Machine Learning)
+    Learning from data
+
+DL (Deep Learning)
+    Learning from complex pattrens (Images) (Neural Networks)
+
+NLP (Natural Language Processing)
+    Understanding Human Languages
+    Ex.
+        English
+        Telugu
+        Hindi
+        ---
+        ---
+        ---
+
+Generative AI
+    Generate New Content
+    Ex.
+        Text
+        Images
+        Audio
+        Video
+        Code
+        ---
+        ---
+        ---
+
+Agentic AI
+    do task without human
+
+Prompt Engineering
+
+MLOps
+    1) GitHub
+    2) GitHub Hook
+    3) Jenkins
+    4) Docker
+    5) EC2
+
+Integration
+    AI - Frontend (Angular / React)
+    AI - Backend (Spring Boot)
+
+Python Installation
+
+    python --version (cmd)
+       (or)
+    python -v
+
+IDE
+***
+    Integrated Development Environment
+    Ex.
+        VSCode
+        Anaconda
+        Jupiter
+
+VSCode
+    Microsoft
+    Open Source IDE
+
+    https://code.visualstudio.com/download
+
+
+numpy
+*****
+    numpy stands for "numerical python"
+    fast "arrays operations"
+    matrix "calculations"
+    Linear Algebra
+    Machine Learning "Preprocessing"
+    "Better" Memory Utilization
+
+    > pip install numpy
+
+Virtual Environment
+*******************
+    > python3 -m venv venv
+    
+    > source venv/bin/activate (Mac Book)
+    > venv\Scripts\activate (VSCode - cmd)
+    > venv\Scripts\Activate.ps1 (VSCode - PowerShell)
+
+    
+    > pip install numpy
+
+pandas
+******
+    Data Analysis
+    Data Cleaning
+    Data manipulation
+    Working with tabular data (Ex. Excel Sheet / CSV FIle)
+
+    pip install pandas
+
+    import pandas as pd
+
+
+
+
+
+
