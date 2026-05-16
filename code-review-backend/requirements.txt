@@ -1,0 +1,6 @@
+fastapi # develop api calls GET,POST,PUT,DELETE,....
+uvicorn[standard] # uvicorn is the light weight http server, used to run api calls
+anthropic # LLM (helps to run agent)
+python-multipart # upload files (.java / .c / .cpp / .py)
+pydantic # java files must have ".java"
+rich # supporting library for antropic llm
