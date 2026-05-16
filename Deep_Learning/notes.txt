@@ -1,0 +1,119 @@
+07-Mar-2026
+***********
+Repo
+    1) Git
+    2) VSCode
+    3) GitHub Account
+
+Git is the software used to interact with GitHub
+
+> git --version
+
+VSCode is the suggested IDE
+
+Variables
+*********
+    Python is "high level programming language"
+    Python used to develop "ML,DL,NLP,GenAI,Agentic AI,Django,FastAPI" Applications....
+    extension must be ".py"
+    "python" is the tool, used to execute "Python Code"
+    Ex.
+        python basics.py
+    Variables are used to store the data
+    
+    msg = "AshokIT"
+    print(msg) //AshokIT
+
+    datatype representing "type of data"
+    Ex.
+    1) int
+    2) float
+    3) str
+    4) bool
+    5) list
+    6) tuple
+    7) set
+    8) dict
+
+Rules for Variables
+*******************
+1) never starts with "numbers", may start with "letters or _"
+2) never allows " " (spaces)
+3) never use python predefined keyword. ,
+
+10-Mar-2026
+List of softwares
+*****************
+1) python 
+        https://www.python.org/downloads/
+    
+    > python --version
+         (or)
+    > python3 --version
+
+2) install visual studio code
+        https://code.visualstudio.com/download
+
+3) enable AutoSave
+    File ---> AutoSave
+
+datatypes
+*********
+1) int -- whole
+2) float --- fractional
+3) bool --- True / False
+4) str --- "", '', """  immutable
+5) list --- [] mutable
+6) tuple --- () immutable
+7) set --- {}
+8) dict -- key & value
+
+11-Mar-2026
+Functions
+*********
+    particular "business logic" called as "function"
+            (or)
+    "block of code" also called as Functions
+
+    Functions are used to "reuse" the "business logic"
+
+    "def" is the keyword used to declare the Functions
+
+    "pass" is the keyword, used to tell "no business logic in body"
+
+List
+****
+    Ordered
+    Mutable (we can modify)
+    Allows Duplicates
+    Hetrogeneous Elements
+    []
+
+Deep Learning (DL)
+******************
+
+fastapi - develop API'S
+
+uvicorn - light weight http server, used to run API'S
+
+
+
+Camera --->.  Scan Image
+
+               Animals           ---->.  Output
+
+
+               Dog                         Dog
+
+
+               Ele                          Ele
+
+
+Training Time
+
+Train ---> X-Ray's. (20hrs)  --->. 66%
+
+
+https://github.com/fullstacktraning/deep-learning-appln.git
+               
+        
