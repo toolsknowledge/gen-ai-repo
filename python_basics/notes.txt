@@ -32,3 +32,42 @@ Ex.
 download and install python
 
 website : https://www.python.org/downloads/
+
+
+pandas
+******
+        python library
+    - Data Analysis
+    - Data Cleaning
+    - Data Transformation
+    - Data Visualization Preparation
+    - CSV/Excel Files Handling
+    - Frquently we will use in Machine Learning
+
+    install
+    > pip install pandas
+
+    import
+    import pandas as pd
+
+    print(pd.__version__)
+
+1) switch to python_basics
+    > cd python_basics
+
+2) create requirements.txt
+        pandas
+
+3) create virtual environment
+        > python3 -m venv venv
+                (or)
+        > python -m venv venv
+
+4) activate virtual environment
+
+        > source venv/bin/activate (mac)
+                (or)
+        > venv\Scripts\activate (windows)
+
+5) install requirements.txt file
+        pip install -r requirements.txt
