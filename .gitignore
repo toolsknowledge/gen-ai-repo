@@ -1,6 +1,33 @@
+# Secrets — NEVER commit these
+.env
+*.env
+.env.*
+!.env.example
+
+# Python
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
-.DS_Store
+*.pyo
+*.pyd
 venv/
-.env
+.venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# ChromaDB local store
+chroma/
+.chroma/
+
+# Uploaded files
+uploads/*
+!uploads/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+*.log
