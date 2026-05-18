@@ -14,7 +14,7 @@ ENV/
 # =========================
 # JUPYTER NOTEBOOKS
 # =========================
-.ipynb_checkpoints/
+
 
 # Jupyter Lab
 .jupyter/
