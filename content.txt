@@ -1,0 +1,103 @@
+Python
+******
+    Machine Learning
+    Deep Learning
+    NLP (Natural Language Processing)
+    Generative AI (1st)
+    Agentic AI (1st)
+    Fast API'S
+    Automation
+
+Topics (3 weeks)
+***************
+    Variables with DataTypes
+    int  str  bool  list  tuple  set  dict  None
+
+    functions -- business logic
+                 reuse business logic
+
+    Ex.   lambda functions (Anonymous functions)
+
+    Loops
+
+    Conditional Statements
+
+    OOPS (Object Oriented Programming System)
+        Classes
+        Objects
+        Encapsulation
+        Abstraction
+        Inheritance
+        Polymorphism
+        ---
+        ---
+        ---
+
+    Libraries
+    1) numpy (numerical python)
+    2) pandas
+    3) matplotlib
+        draw plots / graphs
+        Ex.
+                Pie
+                Bar
+                Scatter
+                Subgraphs
+                ---
+                ---
+                ---
+    4) seaborn
+            styled graphs
+            built on top of matplotlib
+
+IDE'S (Integrated Development Environment)
+
+    1) VSCode (Visual Studio Code)
+    2) Notebook
+    3) Google Colab
+    4) Pycharm
+
+Agentic AI
+**********
+1) LLM (Large Language Model)
+    Ex.
+            Antropic (Claude)
+            Open AI
+            ---
+            ---
+            ---
+    Transformers
+
+    Create Project (E2E)
+
+    Deploy (AWS Server - CICD Pipeline (LLMOps))
+
+2) Single Agent Development
+        Deploy (AWS / Azure / GCP)
+
+3) Multi Agent
+
+4) RAG (Retrival Augumentation Generation) Protocol
+    - 3 to 4 appln
+
+5) n8n (Predefined Agent)
+
+6) MCP
+
+7) Scenario Based Questions
+
+8) CV with Agentic AI
+
+Generative AI
+*************
+        New Content
+
+        Prompt : Russia - Ukrian war
+                    Images
+                    Audio
+                    Video
+                    Text
+                    Code
+
+        
+    
