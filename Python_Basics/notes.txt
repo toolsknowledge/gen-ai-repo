@@ -1,0 +1,105 @@
+IDE : Integrated Development Environment
+
+Ex.
+        VSCode (Visual Studio Code)
+        Pycharm
+        Jupiter Notebook
+        Google Colab
+
+VSCode : https://code.visualstudio.com/download
+
+Python Software : https://www.python.org/downloads/
+
+> python3 --version (Python 3.14.3)
+
+Extension : .py
+
+Execute : python main.py
+
+Variables
+*********
+    Variables are used to store the data
+
+    declare
+    *******
+    1) variable declaration must have a-z, A-Z, 0-9, $ and _
+    2) variable declaration should not start with digits
+
+
+virtual environment
+*******************
+
+mac book
+********
+> python3 -m venv venv314
+> source venv314/bin/activate
+> create 
+        requirements.txt (root directory)
+            numpy
+> pip install -r requirements.txt
+
+windows
+*******
+> python3 -m venv venv314
+
+> venv314\Scripts\activate (cmd) / venv314\Scripts\activate.psi (powershell)
+
+> create requirements.txt
+
+> pip install -r requirements.txt
+
+
+numpy
+*****
+        numpy is the python library
+        numerical python
+        used to perform "mathematical operations"
+        numpy built on top of "c lang", so numpy have "good performance"
+
+        import numpy
+        ************
+        import numpy as np
+
+pandas
+******
+        pandas also "python library"
+        pandas for "data analysis"
+        pandas deals "tabular data"
+        pandas able to "clean the data"
+
+        requirements.txt
+        pandas
+        openpyxl
+
+        pip install -r requirements
+
+        "openpyxl" is one of the python library, used to deal with "Excel Sheets"
+
+
+matplotlib
+        matplotlib, used to draw the graphs
+        1) Line
+        2) Bar
+        3) Pie
+        4) Scatter
+        5) Histogram
+
+Lists
+*****
+        1) Ordered
+        2) Mutable
+        3) allows duplicates
+        4) hetrogeneous elements
+        5) []
+
+Tuples
+******
+        1) Ordered
+        2) immutable
+        3) allows duplicates
+        4) ()
+        5) faster compated to lists
+ 
+
+
+
