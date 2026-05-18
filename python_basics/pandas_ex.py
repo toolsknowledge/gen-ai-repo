@@ -29,7 +29,7 @@ import pandas as pd
 # print(df)
 
 # Example-6
-df = pd.read_csv("employees.csv")
+# df = pd.read_csv("employees.csv")
 # print(df)
 # print(df.head()) # read 5 rows
 # print(df.head(3)) # read 3 rows
@@ -55,3 +55,41 @@ df = pd.read_csv("employees.csv")
 
 # print(df.sort_values("Salary",ascending=False).head(1)[["Name","Department","Designation"]]) #  display highest paid employee
 # print(df[(df["Salary"]>70000) & (df["Department"]=="IT")]) # apply multiple conditions
+
+# Load the CSV file
+# load csv file
+df = pd.read_csv("employees_null.csv")
+# print(df)
+
+# missed value displays with "True"
+# print(df.isnull())
+
+# missed value displays with "False"
+# print(df.notnull())
+
+# find nulls per column
+# print(df.isnull().sum())
+
+# null_pct = (df.isnull().sum() / len(df)) * 100
+# print(null_pct)
+
+# print(df.fillna(0))
+
+# print(df.fillna(df["age"].mean()))
+# print(df.fillna(df["salary"].mean()))
+# print(df)
+# print(df.ffill())
+# print(df.bfill())
+# df[["age", "salary"]] = df[["age", "salary"]].interpolate()
+# print(df)
+
+# print(df.dropna())
+# print(df.dropna(how="all"))
+# print(df.dropna(subset=["age"]))
+print(df.dropna(thresh=2))
+
+
+
+
+
+
