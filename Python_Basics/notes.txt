@@ -21,6 +21,8 @@ pandas
 
 2) create requirements.txt
         pandas
+        matplotlib
+        numpy
 
 3) create virtual environment
         > python3 -m venv venv
@@ -35,3 +37,9 @@ pandas
 
 5) install requirements.txt file
         pip install -r requirements.txt
+
+matplotlib
+**********
+        matplotlib library, used for Visualization
+        (Graphs & plots)
+
