@@ -71,3 +71,15 @@ pandas
 
 5) install requirements.txt file
         pip install -r requirements.txt
+
+
+matplotlib
+**********
+        matplotlib library for data Visualization
+        (Graphs & plots)
+
+        works well with pandas and numpy
+
+        pip install matplotlib
+
+        from matplotlib.pyplot as plt
