@@ -1,0 +1,64 @@
+Python
+******
+    Python is the high level programming language
+    Python, used to build
+                1) Web Applications
+                2) Enterprise Applications
+                3) DataScience Applications
+                        Machine Learning
+                        Deep Learning
+                        NLP (Natural language Processing)
+                        Gen AI (Generative AI)
+                        Agentic AI
+                4) Python for Automation also
+    Python is open source
+    Python is platform independent
+    Python supports the "libraries"
+    Ex.
+            numpy (numerical python) --- mathematical operations on lists
+            pandas --- tabular data
+            matplotlib --- plot the graphs 
+            seaborn --- display rich/styled graphs
+            fastapi --- used to develop API's (Rest API's) Ex. GET,POST,PUT,DELETE,.....
+            flask -- web applications
+            uvicorn -- used to run api calls
+            scikit-learn -- develop machine learning applications
+            tensorflow -- develop deep learning applications
+            nltk -- develop nlp applications
+
+    "pip" is the tool, used to download above libraries
+    Ex.
+            pip install numpy pandas
+
+    extension for python files are ".py"
+
+    "python" is the tool, used to execute the python script
+
+            python demo.py
+                (or)
+            python3 demo.py
+
+    IDE Stands for Integrated Development Environment
+    IDE, used to build applications
+    Ex.
+        VSCode (Visual Studio Code)
+        Jupyter Notebook
+        Google Colab
+        Pycharm
+        ---
+        ---
+        ---
+
+download and install python
+
+website : https://www.python.org/downloads/
+
+> python --version (or) python3 --version
+
+2) download and install Visual Studio Code
+    website : https://code.visualstudio.com/download
+
+    Note : enable AutoSave
+
+
+
