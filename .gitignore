@@ -77,7 +77,7 @@ tensorboard_logs/
 # =========================================
 # Matplotlib / Output Files
 # =========================================
-*.png
+
 *.jpg
 *.jpeg
 *.pdf
