@@ -1,0 +1,26 @@
+1
+**
+Tabular Data
+1) Row Called as Data Point
+used in :
+        Linear Regreesion
+        Logistic Regreesion
+        ---
+        ---
+        ---
+
+
+2) Image Data
+        CNN (Convolutional Neoural Network)
+
+3) Recurrent Neural Network
+        Sequential Data (or) Time Series Data
+
+        Stock Market
+        Sentimental Analysis (Words should in orders  w1 w2.w3,..... wn)
+        Language Translations
+        Image Captioning
+        Speech Recognization
+
+4) Are we able to use ANN (MLP) ?
+        No
