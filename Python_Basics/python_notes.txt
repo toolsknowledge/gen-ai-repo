@@ -1,3 +1,27 @@
+Python Basics
+      numpy
+      pandas
+      matplotlib
+      seaborn
+
+Machine Learning
+        25+ Algorithms (statistics)
+
+Deep Learning
+        Image Processing (Face Auth / Image Recognization)
+
+NLP (Natural Language Processing)
+        Chat-Bot (Hindi / Telugu)
+
+Generative AI
+
+Agentic AI - LLM'S, Tranformers, RAG, MCP Client,...... 
+
+Three Projects (portfolio)
+
+Deployments (AWS) - CI/CD Pipeline
+
+
 Python
 ******
     Python is the high level programming language
@@ -59,6 +83,39 @@ website : https://www.python.org/downloads/
     website : https://code.visualstudio.com/download
 
     Note : enable AutoSave
+                Application, will save automatically
+
+20-may-2026
+***********
+virtual environment
+
+step 1.
+        open the terminal and change from "powershell" to "command prompt"
+        view -> terminal
+        click dropdown -> choose command prompt
+
+
+step 2.
+        create virtual environment
+
+        > python3 -m venv venv314 
+                (or)
+        > python -m venv venv314
+
+step 3.
+        activate virtual environment 
+
+        source venv314/bin/activate (mac)
+        venv314\Scripts\activate (windows)
+
+step 4.
+        create requirements.txt with libraries
+
+step 5.
+        install requirements.txt file
+
+        > pip install -r requirements.txt
+
 
 
 
