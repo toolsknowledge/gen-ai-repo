@@ -1,0 +1,85 @@
+Welcome to GitHub
+
+Visual Studio Code : https://code.visualstudio.com/download
+
+In This Course we will cover
+
+1) Python
+2) Statistics
+3) Machine Learning (ML)
+4) Deep Learning (DL)
+5) Natural Language Processing (NLP)
+6) Generative AI
+7) Agentic AI
+8) MLOps
+9) Three Projects (ECommerce / Medical / Agent)
+10) Integrations (Spring Boot / Data Analytics / Data Science / ReactJS)
+
+
+IDE (Integrated Development Environment)
+Ex.
+        VSCode
+        Jupyter Notebook
+        Google Colab
+        Pycharm
+        ---
+        ---
+        ---
+    VSCode given by Microsoft and Open Source IDE
+
+    website : https://code.visualstudio.com/download
+
+download and install python
+
+website : https://www.python.org/downloads/
+
+
+pandas
+******
+        python library
+    - Data Analysis
+    - Data Cleaning
+    - Data Transformation
+    - Data Visualization Preparation
+    - CSV/Excel Files Handling
+    - Frquently we will use in Machine Learning
+
+    install
+    > pip install pandas
+
+    import
+    import pandas as pd
+
+    print(pd.__version__)
+
+1) switch to python_basics
+    > cd python_basics
+
+2) create requirements.txt
+        pandas
+
+3) create virtual environment
+        > python3 -m venv venv
+                (or)
+        > python -m venv venv
+
+4) activate virtual environment
+
+        > source venv/bin/activate (mac)
+                (or)
+        > venv\Scripts\activate (windows)
+
+5) install requirements.txt file
+        pip install -r requirements.txt
+
+
+matplotlib
+**********
+        matplotlib library for data Visualization
+        (Graphs & plots)
+
+        works well with pandas and numpy
+
+        pip install matplotlib
+
+        from matplotlib.pyplot as plt
