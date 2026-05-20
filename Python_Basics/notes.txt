@@ -76,7 +76,6 @@ Step 5.
 
 Step 6.
         create .gitignore 
-
         
 Step 7.
         git add .
