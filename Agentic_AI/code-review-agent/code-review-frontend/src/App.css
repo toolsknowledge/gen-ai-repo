@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #07070f;
+  --bg2: #0e0e1c;
+  --bg3: #14142a;
+  --border: #1e1e38;
+  --border2: #2a2a48;
+  --text: #e0e0ff;
+  --muted: #6060a0;
+  --accent: #00d4ff;
+  --accent2: #7c3aed;
+  --green: #22c55e;
+  --red: #ef4444;
+  --amber: #f59e0b;
+  --font-ui: 'Syne', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+}
+
+body { background: var(--bg); color: var(--text); font-family: var(--font-ui); overflow: hidden; }
+
+.app { display: flex; flex-direction: column; height: 100vh; }
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  overflow: hidden;
+  gap: 0;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: var(--bg);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+  box-shadow: 0 4px 16px #00d4ff22;
+}
+.btn-primary:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 20px #00d4ff33; }
+.btn-secondary {
+  background: var(--bg3);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover:not(:disabled) { color: var(--text); border-color: var(--border2); }
+.btn-sm { padding: 6px 14px; font-size: 12px; border-radius: 6px; }
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.badge-high { background: #ef444422; color: #ef4444; border: 1px solid #ef444433; }
+.badge-medium { background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b33; }
+.badge-low { background: #22c55e22; color: #22c55e; border: 1px solid #22c55e33; }
+.badge-pass { background: #22c55e22; color: #22c55e; border: 1px solid #22c55e33; }
+.badge-fail { background: #ef444422; color: #ef4444; border: 1px solid #ef444433; }
+.badge-warn { background: #f59e0b22; color: #f59e0b; border: 1px solid #f59e0b33; }
