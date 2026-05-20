@@ -29,7 +29,7 @@ datasets/
 
 *.xlsx
 *.xls
-*.json
+
 *.parquet
 *.feather
 *.h5

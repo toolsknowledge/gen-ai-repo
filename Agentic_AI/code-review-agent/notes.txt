@@ -1,52 +1,54 @@
-step 1.
-        navigate to code_review_backend
 
-step 2.
-        create and enable environment to run Agentic AI (Code Review Agent)
+Step 1.
+    clone master url in desktop
 
-        > python3 -m venv venv
-        > source venv\bin\activate
+    > git clone https://github.com/toolsknowledge/gen-ai-repo.git
+
+    Note : "gen-ai-repo" directory will create automatically in "Desktop"
+
+Step 2.
+    open with vscode (gen-ai-repo)
 
 Step 3.
-        install required libraries
-
-        requirements.txt
-
-        pip install -r requirements.txt
+     checkout branch
+     > terminal
+     > git checkout batch-20
 
 Step 4.
-        create antropic api key
-        https://platform.claude.com/dashboard
+        navigate to coding-review-agent-backend
 
-Step 5. 
-        export api key in code_review_backend
+        > cd Agentic_AI
+        > cd code-review-agent
+        > cd code-review-agent-backend
 
-        
-Step 6.
-        start uvicorn server
-
-        > uvicorn server:app --reload
-              (or)
-        > python uvicorn server:app --reload
+Step 5.
+        python3 -m venv venv
+             (or)
+        python -m venv venv
 
 Step 6.
-        open swagger
-            http://127.0.0.1:8000/docs
-
+        source venv/bin/activate (mac)
+        venv\Scripts\activate (windows)
 
 Step 7.
-        in new terminal navigate to "code_review_frontend"
+        pip install -r requirements.txt
 
 Step 8.
-        download libraries
-            npm install
+        set API key
 
+        
 Step 9.
-        run frontend
-
-        > npm run dev
+        start uvicorn server
+        > uvicorn server:app --reload
 
 Step 10.
-        execute below end point
+    navigate to code-review-frontend
+        > cd Agentic_AI
+        > cd code-review-agent
+        > cd code-review-frontend
 
-        http://localhost:3000/
+Step 11.
+        npm install
+
+Step 12.
+        npm run dev
