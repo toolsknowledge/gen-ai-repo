@@ -1,0 +1,52 @@
+step 1.
+        navigate to code_review_backend
+
+step 2.
+        create and enable environment to run Agentic AI (Code Review Agent)
+
+        > python3 -m venv venv
+        > source venv\bin\activate
+
+Step 3.
+        install required libraries
+
+        requirements.txt
+
+        pip install -r requirements.txt
+
+Step 4.
+        create antropic api key
+        https://platform.claude.com/dashboard
+
+Step 5. 
+        export api key in code_review_backend
+
+        
+Step 6.
+        start uvicorn server
+
+        > uvicorn server:app --reload
+              (or)
+        > python uvicorn server:app --reload
+
+Step 6.
+        open swagger
+            http://127.0.0.1:8000/docs
+
+
+Step 7.
+        in new terminal navigate to "code_review_frontend"
+
+Step 8.
+        download libraries
+            npm install
+
+Step 9.
+        run frontend
+
+        > npm run dev
+
+Step 10.
+        execute below end point
+
+        http://localhost:3000/
