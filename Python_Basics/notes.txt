@@ -69,3 +69,19 @@ Step 4.
         powershell - command prompt
         > git checkout batch-24
 
+Step 5.
+        git add .
+        git commit -m "code"
+        git pull
+
+Step 6.
+        create .gitignore 
+
+        
+Step 7.
+        git add .
+        git commit -m "code"
+        git pull
+
+
+
