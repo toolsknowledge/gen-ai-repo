@@ -43,3 +43,29 @@ matplotlib
         matplotlib library, used for Visualization
         (Graphs & plots)
 
+
+Step 1.
+        navigate to desktop
+
+        open cmd prompt
+
+        cd OneDrive
+        cd Desktop
+
+Step 2.
+        clone the repository
+
+        > git clone https://github.com/toolsknowledge/gen-ai-repo.git
+
+        Note : if clone success, "gen-ai-repo" folder will create on Desktop
+
+Step 3.
+        open "gen-ai-repo" folder with VSCode 
+
+Step 4.
+        checkout batch-24
+
+        open terminal
+        powershell - command prompt
+        > git checkout batch-24
+
