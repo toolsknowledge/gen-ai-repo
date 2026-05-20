@@ -1,3 +1,29 @@
+Step 1.
+        navigate to "desktop" and clone the repo
+        > git clone https://github.com/toolsknowledge/gen-ai-repo.git
+        Note : if cloning success, "gen-ai-repo" directory will create
+
+Step 2.
+        open "gen-ai-repo" folder with the help of "vscode"
+
+Step 3.
+        checkout batch-19
+
+        open the terminal
+        
+        powershell to command prompt
+        
+        > git checkout batch-19
+
+        
+
+
+
+
+
+
+
+
 step 1.
         navigate to code_review_backend
 
