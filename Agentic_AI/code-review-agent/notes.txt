@@ -8,12 +8,66 @@ Step 2.
 
 Step 3.
         checkout batch-19
-
         open the terminal
-        
         powershell to command prompt
-        
         > git checkout batch-19
+
+Step 4.
+        switch to code_review_backend
+                > cd Agentic_AI
+                > cd code_review_agent
+                > cd code_review_backend
+
+Step 5.
+        create virtual environment
+        python3 -m venv venv 
+            (or)
+        python -m venv venv
+
+Step 6.
+        activate virtual environment
+        > source venv/bin/activate (mac book)
+        > venv\Scripts\activate (windows)
+
+Step 7.
+        install dependencies
+        > pip install -r requirements.txt
+
+Step 8.
+        set antropic key (https://codeshare.io/5eeJ8K) (line no.71-73) 
+
+    
+Step 9.
+        start server
+        > uvicorn server:app --reload
+
+Step 10.
+        open the "new terminal" and change from "powershell to command prompt"
+
+Step 11.
+        navigate to code_review_frontend
+                > cd Agentic_AI
+                > cd code_review_agent
+                > cd code_review_frontend
+
+Step 12.
+        install packages (NodeJS Required (download and install NodeJS))
+            > npm install (it will install all react packages)
+
+Step 13.
+        launch frontend
+            > npm run dev
+            http://localhost:3000/
+
+Step 14.
+        add .gitignore file gen-ai-repo
+
+Step 15.
+        git add .
+        git commit -m "code"
+
+Step 16.
+        git pull
 
         
 
