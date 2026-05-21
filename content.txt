@@ -99,5 +99,33 @@ Generative AI
                     Text
                     Code
 
+
+Git Cloning
+************
+1) navigate to "Desktop" through command prompt
+        > open command prompt
+        cd OneDrive
+        cd Desktop
+
+2) download and install git
+        website : https://git-scm.com/install/windows
+
+        > git --version
+
+3) clone below repo
+    > git clone https://github.com/toolsknowledge/gen-ai-repo.git
+
+    Note : if cloning success, automatically "gen-ai-repo" directory(folder) will create in Desktop
+
+4) open "gen-ai-repo" with the help of VSCode (Visual Studio Code)
+        File --> Open Folder --> Desktop --> gen-ai-repo
+
+5) checkout batch-26 (branch)
+        > git checkout batch-26
+
+6) git add .
+   git commit -m "code"
+   git pull
+
         
     
