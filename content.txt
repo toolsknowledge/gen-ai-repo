@@ -117,13 +117,15 @@ Git Cloning
 
     Note : if cloning success, automatically "gen-ai-repo" directory(folder) will create in Desktop
 
-4) open "gen-ai-repo" with the help of VSCode (Visual Studio Code)
+4) open "gen-ai-repo" with the help of VSCode (Visual Studio Code) (powershell - command prompt)
         File --> Open Folder --> Desktop --> gen-ai-repo
 
 5) checkout batch-26 (branch)
         > git checkout batch-26
 
-6) git add .
+6) git config --global user.name "Samba"
+   git config --global user.email "samba.pendela@gmail.com"
+   git add .
    git commit -m "code"
    git pull
 
