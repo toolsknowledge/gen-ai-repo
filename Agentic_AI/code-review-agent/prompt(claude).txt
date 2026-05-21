@@ -1,0 +1,137 @@
+I am a software engineering student learning Agentic AI development.
+
+Build me a complete, production-ready Code Review Agent application from scratch with the following requirements:
+
+WHAT TO BUILD:
+A full-stack AI-powered code review tool where a user pastes or uploads code, and an AI agent automatically reviews it for bugs, security issues, performance problems, and code quality.
+
+TECH STACK:
+- Backend: Python + FastAPI + Anthropic Claude API (claude-opus-4-5)
+- Frontend: React + Vite (JavaScript, no TypeScript)
+- AI: Anthropic Claude with tool calling (ReAct agent pattern)
+
+ARCHITECTURE:
+- Backend runs on port 8000 (FastAPI + uvicorn)
+- Frontend runs on port 5173 (Vite dev server)
+- React calls FastAPI via HTTP POST
+- FastAPI runs the agent loop and calls Anthropic API
+
+BACKEND REQUIREMENTS (server.py):
+1. FastAPI app with CORS enabled for localhost:5173
+2. Anthropic client initialized from ANTHROPIC_API_KEY environment variable
+3. Two tools Claude can call:
+   - analyze_complexity: counts lines, functions, max nesting depth, cyclomatic complexity score
+   - check_security_patterns: scans for hardcoded passwords, SQL injection, eval(), pickle, MD5, shell=True, HTTP links, DEBUG=True using regex
+4. A ReAct agent loop (max 8 iterations) that:
+   - Sends code to Claude with the tools
+   - Executes any tools Claude requests
+   - Passes tool results back to Claude
+   - Repeats until Claude returns a final review
+5. Three endpoints:
+   - GET /health → returns api_key_set status
+   - POST /review → runs the full agent, returns review + metrics + security
+   - POST /scan → runs local tools only, no Claude call, instant response
+6. System prompt that instructs Claude to always use both tools first, then write a structured markdown review covering: Overview, Bugs, Security, Performance, Readability, What's Done Well, Priority Fixes, and a Score table
+
+FRONTEND REQUIREMENTS:
+File structure:
+code-review-frontend/
+  src/
+    App.jsx + App.css
+    components/
+      Header.jsx + Header.css
+      CodeEditor.jsx + CodeEditor.css
+      ReviewPanel.jsx + ReviewPanel.css
+  main.jsx
+  index.html
+  package.json
+  vite.config.js (port 3000)
+
+Features to build:
+1. Header component: app title, subtitle, live backend status dot (green=ready, red=offline, amber=checking) - polls /health on load
+2. CodeEditor component:
+   - Language tab buttons: python, javascript, java, go, typescript
+   - File upload button (📁) that reads file content and auto-detects language from extension
+   - Drag and drop file support on the editor area
+   - Line numbers sidebar
+   - Code textarea
+   - Load Sample button that loads buggy sample code per language
+   - Quick Scan button → calls /scan endpoint
+   - Full AI Review button → calls /review endpoint
+   - Agent log section showing steps in real time
+3. ReviewPanel component:
+   - Empty state with instructions when no review yet
+   - Loading spinner while agent is working
+   - Error state if backend is offline
+   - Metrics grid: 4 cards showing Lines, Functions, Complexity, Max Depth with color coding
+   - Complexity progress bar (green/amber/red based on score)
+   - Security scan section with issues listed, each showing HIGH/MEDIUM/LOW badge and issue name
+   - AI review section rendering the markdown response from Claude
+4. App.jsx manages all state: code, language, review, metrics, security, loading, error, agentLog
+5. Sample buggy code for each language (python, javascript, java) that demonstrates security and performance issues
+
+SAMPLE BUGGY CODE TO INCLUDE:
+Python:
+  - Hardcoded password and DB URL
+  - SQL injection via string concatenation
+  - pickle.loads() usage
+  - O(n²) nested loop
+
+JavaScript:
+  - Hardcoded API_KEY
+  - SQL injection
+  - eval() usage
+  - O(n³) nested loop
+
+Java:
+  - Hardcoded DB_PASSWORD and SECRET_KEY
+  - SQL injection
+  - MD5 password hashing
+  - O(n²) nested loop
+
+SUPPORTED FILE EXTENSIONS FOR UPLOAD:
+.py→python, .js→javascript, .jsx→javascript, .ts→typescript, .tsx→typescript,
+.java→java, .go→go, .rb→ruby, .cpp→cpp, .c→c
+
+DESIGN:
+Dark theme with these colors:
+- Background: #07070f and #0e0e1c
+- Accent: #00d4ff (cyan)
+- Secondary accent: #7c3aed (purple)
+- Success: #22c55e, Warning: #f59e0b, Danger: #ef4444
+- Text: #e0e0ff, Muted: #6060a0
+- Cards: #0e0e1c with #1e1e38 borders
+- Monospace font for code areas
+
+SETUP INSTRUCTIONS TO INCLUDE:
+Backend:
+  cd code-review-backend
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install fastapi "uvicorn[standard]" anthropic python-multipart pydantic
+  export ANTHROPIC_API_KEY="your-key-here"
+  python -m uvicorn server:app --port 8000
+
+Frontend:
+  npm create vite@latest code-review-frontend -- --template react
+  cd code-review-frontend
+  npm install
+  npm run dev
+
+Please generate ALL files with complete, working code - no placeholders, no TODOs, no truncation. Every file should be fully implemented and ready to run. Generate them in this order:
+1. code-review-backend/requirements.txt
+2. code-review-backend/server.py
+3. code-review-frontend/index.html
+4. code-review-frontend/vite.config.js
+5. code-review-frontend/package.json
+6. code-review-frontend/src/main.jsx
+7. code-review-frontend/src/App.css
+8. code-review-frontend/src/App.jsx
+9. code-review-frontend/src/components/Header.css
+10. code-review-frontend/src/components/Header.jsx
+11. code-review-frontend/src/components/CodeEditor.css
+12. code-review-frontend/src/components/CodeEditor.jsx
+13. code-review-frontend/src/components/ReviewPanel.css
+14. code-review-frontend/src/components/ReviewPanel.jsx
+
+After generating all files, provide the exact terminal commands to run both servers and the URL to open in the browser.
