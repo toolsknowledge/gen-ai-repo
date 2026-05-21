@@ -1,1 +1,1 @@
-numpy
+rich # customize the text
