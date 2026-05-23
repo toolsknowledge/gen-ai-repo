@@ -410,12 +410,126 @@
 			"typeName": "shape"
 		},
 		{
-			"editingShapeId": "shape:fasE0iv0p1sX598kjXht1",
+			"x": 138.6101598320779,
+			"y": 390.0824640805067,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:DbQ9RGGm2cyg84gH8SqzL",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 453.6421203613281,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "1) n8n"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "2) multi-agent"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "3) RAG"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "4) Tools & Frameworks langchain,....."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "5) LLM'S"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "6) Small LLM"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "7) Scenario Based Questions"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:h_E6pHxDd3WWbCW-RnPBT",
+			"index": "a6J83DhV",
+			"typeName": "shape"
+		},
+		{
+			"editingShapeId": "shape:DbQ9RGGm2cyg84gH8SqzL",
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:fasE0iv0p1sX598kjXht1"
+				"shape:DbQ9RGGm2cyg84gH8SqzL"
 			],
-			"hoveredShapeId": "shape:fasE0iv0p1sX598kjXht1",
+			"hoveredShapeId": "shape:DbQ9RGGm2cyg84gH8SqzL",
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -441,9 +555,7 @@
 		{
 			"followingUserId": null,
 			"opacityForNextShape": 1,
-			"stylesForNextShape": {
-				"tldraw:geo": "rectangle"
-			},
+			"stylesForNextShape": {},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
@@ -458,7 +570,7 @@
 				"x": 0,
 				"y": 0,
 				"w": 952.0833129882812,
-				"h": 469.4444274902344
+				"h": 322.9166564941406
 			},
 			"insets": [
 				false,
@@ -581,9 +693,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 163.88888237652984,
-			"y": 22.916665756040178,
-			"z": 1,
+			"x": 225.69369801362535,
+			"y": -298.75136020449366,
+			"z": 0.6624571862765699,
 			"meta": {},
 			"id": "camera:page:h_E6pHxDd3WWbCW-RnPBT",
 			"typeName": "camera"
