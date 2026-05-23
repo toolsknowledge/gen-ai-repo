@@ -1,0 +1,70 @@
+1) Layers in AI
+
+2) what is Agentic AI
+
+3) RAG Protocol
+
+4) MCP Server & MCP Client
+
+5) Architecture of Agentic AI Application
+
+6) Execution of Agent
+
+7) Deploy Agent in "AWS" with "Bedrock services"
+
+Layers in AI
+************
+1) Machine Learning
+2) Deep Learning
+3) NLP (Natural Language Processing)
+4) Generative AI
+5) Agentic AI
+6) Agents
+
+what is Agentic AI
+******************
+        complete the task/goal without Human involvment
+        Agentic AI, internally uses "tools"
+        Agentic AI, takes the tools support to "complete tasks"
+
+
+RAG Protocol
+*************
+        Retrival Augumented Generation Protocol
+
+
+
+1) Architecture of Coding Agent
+
+2) Prompt Engg
+
+3) MCP Server & MCP Client
+
+4) RAG Protocol
+
+5) Customize Claude Accroding to our profile
+
+6) Convert Human Prompt to Professional Prompt with Claude
+        
+        i want to develop code-review-agent from scratch
+        1) user wants to upload the coding files like C,C++,Java,Py,......... and allow user to paste code directly in Editors also
+        2) implement the RAG Retrival layer (use architecture.svg already uploaded in project)
+        3) implement MCP Server with MCP Client (use mcp.png)
+        4) develop code-review-agent
+        5) generate reports
+        6) implement FastAPI calls on top of agent (code-review-agent)
+        7) integrate to React (vite)
+        8) deploy in aws server with Bedrock
+        need step by step development like phase-1, phase-2,phase-3,....
+        give me complete instructions including dependencies and installations and execution steps with simple english
+
+7) Build Backend
+
+8) Build RAG
+
+9) Build FastAPI
+
+10) Build React
+
+11) Deploy with AWS (Bedrock)
+
