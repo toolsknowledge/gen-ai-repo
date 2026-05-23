@@ -1,0 +1,46 @@
+OWASP A01: Broken Access Control
+Risk: Users act outside intended permissions.
+Check for: Missing authorization, IDOR, privilege escalation.
+Fix: Verify server-side that the current user owns the requested resource.
+---
+OWASP A02: Cryptographic Failures
+Risk: Sensitive data exposed due to weak or missing encryption.
+Check for: HTTP, MD5/SHA1 passwords, hardcoded keys, unencrypted storage.
+Fix: Use bcrypt/argon2 for passwords. TLS 1.2+. Store secrets in env vars.
+---
+OWASP A03: Injection
+Risk: Attacker sends malicious data interpreted as commands.
+Check for: SQL injection, command injection, template injection.
+Fix: Parameterized queries. Input validation. Never concatenate user input into queries.
+---
+OWASP A04: Insecure Design
+Risk: Missing security controls at design level.
+Check for: No rate limiting, no audit logs, no input validation architecture.
+Fix: Threat modeling during design phase. Defense in depth.
+---
+OWASP A05: Security Misconfiguration
+Risk: Default configs, verbose errors, missing patches.
+Check for: Debug mode in production, default passwords, detailed error messages.
+Fix: Disable debug mode. Remove defaults. Generic error messages to users.
+---
+OWASP A06: Vulnerable Components
+Risk: Using libraries with known vulnerabilities.
+Fix: Regularly audit and update dependencies. Use pip-audit, safety.
+---
+OWASP A07: Authentication Failures
+Risk: Weak authentication allows account compromise.
+Check for: Weak passwords accepted, no MFA, insecure session tokens.
+Fix: Strong password policy, MFA, secure session management.
+---
+OWASP A08: Integrity Failures
+Risk: Code or data assumed to be trusted without verification.
+Check for: pickle.loads on untrusted data, unverified software updates.
+Fix: Use digital signatures. Verify integrity of all external data.
+---
+OWASP A09: Logging Failures
+Risk: Security events not logged, making incidents invisible.
+Fix: Log all auth events, access denials, input validation failures.
+---
+OWASP A10: SSRF
+Risk: Server makes requests to arbitrary URLs controlled by attacker.
+Fix: Allowlist external services. Validate and sanitize all URLs. Disable redirects.

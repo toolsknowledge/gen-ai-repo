@@ -1,0 +1,44 @@
+PATTERN: SQL Injection in Python
+BEFORE:
+    query = "SELECT * FROM users WHERE email='" + email + "'"
+    cursor.execute(query)
+AFTER:
+    cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
+WHY: Parameterized queries prevent user input from being interpreted as SQL.
+
+PATTERN: Hardcoded Secret
+BEFORE:
+    API_KEY = "sk-abc123xyz"
+AFTER:
+    API_KEY = os.environ.get("API_KEY")
+    if not API_KEY:
+        raise RuntimeError("API_KEY environment variable is not set")
+WHY: Secrets in code get committed to git. Use environment variables.
+
+PATTERN: Unsafe deserialization
+BEFORE:
+    data = pickle.loads(user_input)
+AFTER:
+    data = json.loads(user_input)
+WHY: pickle.loads on untrusted input allows arbitrary code execution.
+
+PATTERN: Command injection
+BEFORE:
+    subprocess.call(user_cmd, shell=True)
+AFTER:
+    subprocess.call(["ls", "-la", validated_path])
+WHY: shell=True with user input allows command injection.
+
+PATTERN: Plaintext password comparison
+BEFORE:
+    if user["password"] == password:
+AFTER:
+    if bcrypt.checkpw(password.encode(), user["password_hash"]):
+WHY: Plaintext passwords in database are catastrophic if leaked. Always hash.
+
+PATTERN: Missing type hints
+BEFORE:
+    def process(data, config):
+AFTER:
+    def process(data: dict, config: AppConfig) -> ProcessResult:
+WHY: Type hints catch bugs at development time and document intent.

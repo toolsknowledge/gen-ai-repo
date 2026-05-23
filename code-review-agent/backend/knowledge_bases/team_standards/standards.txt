@@ -1,0 +1,10 @@
+RULE 1: All functions must have type hints in Python.
+RULE 2: No bare except clauses. Always catch specific exceptions.
+RULE 3: All public methods must have docstrings.
+RULE 4: No print() calls in production code. Use logging module.
+RULE 5: Never store passwords in plain text. Always hash with bcrypt.
+RULE 6: Maximum function length is 50 lines. Split if longer.
+RULE 7: All database queries must use parameterized statements.
+RULE 8: Environment variables must be validated at startup.
+RULE 9: All external inputs must be validated before use.
+RULE 10: Security events must be logged with sufficient detail.

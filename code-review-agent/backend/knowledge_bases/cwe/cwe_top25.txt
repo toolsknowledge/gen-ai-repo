@@ -1,0 +1,57 @@
+CWE-89: SQL Injection
+Description: Improper neutralization of special elements in SQL commands.
+Languages: Python, Java, PHP, C#, JavaScript
+Example bad code: query = "SELECT * FROM users WHERE name='" + username + "'"
+Example fix: cursor.execute("SELECT * FROM users WHERE name = %s", (username,))
+Prevention: Always use parameterized queries. Never concatenate user input into SQL.
+---
+CWE-78: OS Command Injection
+Description: Improper neutralization of special elements in OS commands.
+Languages: Python, Java, PHP, C
+Example bad code: subprocess.call(user_input, shell=True)
+Example fix: subprocess.call(["ls", "-la", safe_dir])
+Prevention: Avoid shell=True. Use list arguments. Validate and sanitize all input.
+---
+CWE-502: Deserialization of Untrusted Data
+Description: Deserializing data from untrusted source allows code execution.
+Languages: Python, Java, PHP
+Example bad code: data = pickle.loads(user_input)
+Example fix: data = json.loads(user_input)
+Prevention: Never deserialize untrusted data. Use JSON or other safe formats.
+---
+CWE-22: Path Traversal
+Description: Improper limitation of pathname to restricted directory.
+Languages: Python, Java, C, C++
+Example bad code: open("/var/data/" + user_input)
+Example fix: safe = os.path.realpath(base + user_input); assert safe.startswith(base)
+Prevention: Canonicalize paths and verify they are within the allowed base directory.
+---
+CWE-120: Buffer Overflow
+Description: Copying data into buffer without checking size.
+Languages: C, C++
+Example bad code: char buf[10]; strcpy(buf, input);
+Example fix: strncpy(buf, input, sizeof(buf) - 1);
+Prevention: Always check buffer bounds. Use safe string functions.
+---
+CWE-476: NULL Pointer Dereference
+Description: Dereferencing a NULL pointer causes crash.
+Languages: C, C++, Java
+Example bad code: char* p = getInput(); printf("%s", p);
+Example fix: if (p != NULL) printf("%s", p);
+Prevention: Always check pointers for NULL before dereferencing.
+---
+CWE-256: Plaintext Storage of Password
+Description: Storing passwords in plaintext.
+Example bad code: db.store(username, password)
+Example fix: db.store(username, bcrypt.hashpw(password.encode(), bcrypt.gensalt()))
+Prevention: Always hash passwords with bcrypt, argon2, or scrypt. Never store plaintext.
+---
+CWE-20: Improper Input Validation
+Description: Product does not validate or incorrectly validates input.
+Prevention: Validate all inputs. Use allowlists. Check type, range, format, length.
+---
+CWE-208: Timing Attack
+Description: Observable timing discrepancy allows information exposure.
+Example bad code: if user["password"] == password:
+Example fix: import hmac; hmac.compare_digest(user["password"], password)
+Prevention: Use constant-time comparison functions for all secret comparisons.
