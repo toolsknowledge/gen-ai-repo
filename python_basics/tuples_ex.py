@@ -74,4 +74,39 @@
 # print(len(t1))
 # print(sum(t1))
 
+# t1 = (10,20,30)
+# list() - converts tuple to list
+# l1 = list(t1)
+# l1[0] = 1000
+# tuple() - converts list to tuple
+# t2 = tuple(l1)
+# print(t2)
+
+# t1 = ([1,2],[3,4])
+# t1[0].append(3)
+# print(t1)
+
+# import sys
+# list1 = [10,20,30]
+# tuple1 = (10,20,30)
+# print(sys.getsizeof(list1))
+# print(sys.getsizeof(tuple1))
+
+# def calc(num1,num2):
+#     return num1+num2, num1-num2, num1*num2, num1/num2
+
+# res = calc(200,100)
+# add,sub,mul,div = res
+# print(add,end=" ")
+# print(sub,end=" ")
+# print(mul,end=" ")
+# print(div,end=" ")
+
+students = (
+    (101,"Std1","Java"),
+    (102,"Std2","Python"),
+    (103,"Std3","UI")
+)
+for sid,sname,sub in students:
+    print(f"{sid} - {sname} - {sub}")
 
