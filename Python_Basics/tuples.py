@@ -74,4 +74,26 @@
 # print(len(t1))
 # print(sum(t1))
 
+# students = (
+#     (101,'Std1',20),
+#     (102,'Std2',22),
+#     (103,'Std3',24)
+# )
+# for sid,sname,age in students:
+#     print(f"{sid} | {sname} | {age}")
+
+
+# def calc(num1,num2):
+#     return num1+num2,num1-num2,num1*num2,num1/num2
+
+# res = calc(200,100)
+# print(res)
+# add,sub,mul,div = res
+# print(add,sub,mul,div)
+
+
+# t1 = ([10,20],[30,40,50])
+# t1[0].append(30)
+# print(t1)
+
 
