@@ -28,6 +28,7 @@ def is_safe_path(path: Path) -> bool:
 
 app = Server("code-review-mcp-server")
 
+
 @app.list_tools()
 async def list_tools() -> list[types.Tool]:
     return [
