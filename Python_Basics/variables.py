@@ -108,6 +108,101 @@ res1 = "Hello" if flag1 else "Welcome"
 print(res1)
 
 
+"""
+    list
+    ****
+        collection of "hetrogeneous elements" called as "list"
+        "[]"
+        index starts from "0"
+        mutable
+"""
 
+# list1 = [10,20,30,40,50]
+# print(list1[0], list1[-5])
+# print(list1[2],list1[-3])
+# print(list1[0:3])
+# print(list1[:2])
+# print(list1[2:])
+# print(list1[-3:-1])
+# print(list1[::-1])
+# print(list1[::-2])
+# print(list1[::-3])
+# list1[0] = 1000
+# print(list1)
 
+"""
+    tuple
+    *****
+        collection of hetrogeneous elements
+        index starts from 0
+        ()
+        immutable
+        faster compared to list
+        tuple takes less memory compared to list
+"""
 
+# import sys
+# list1 = [10,20,30,40,50]
+# tuple1 = (10,20,30,40,50)
+# print(sys.getsizeof(list1))
+# print(sys.getsizeof(tuple1))
+
+# tuple2 = (10,20,30,40,50)
+# tuple2[0] = 1000
+# print(tuple2[::-3])
+
+# list1 = [10,"Hello",True]
+# tuple1 = (10,"Gen AI", 10.1)
+# print(type(list1),end=" | ")
+# print(type(tuple1),end=" | ")
+
+# dictionary
+# key & value pairs
+# {} / dict()
+# keys are "immutable"
+# values are "mutable"
+
+# details = {
+#     "name" : "Gen AI",
+#     "ver" : 2
+# }
+# print(details)
+# print(details["name"])
+# details["name"] = "Agentic AI"
+# print(details)
+# print(type(details))
+
+# details = {
+#     "name" : "Hello",
+#     "name" : "Welcome",
+#     "name": {
+#         "name" : "DS"
+#     }
+# }
+# print(details)
+
+# set
+# wont allows duplicates
+# {}
+# s1 = {10,20,30,10,20,30}
+# print(s1)
+# print(type(s1))
+
+# s2 = {}
+# print(type(s2))
+
+# s3 = set()
+# print(type(s3))
+
+# s4 = set([10,10,10])
+# print(s4)
+
+# s5 = set((10,10,10))
+# print(s5)
+
+# None
+# x = None
+# print(x)
+# print(type(x))
+# print(x == x)
+# print(x == 0)
