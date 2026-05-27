@@ -83,3 +83,14 @@ matplotlib
         pip install matplotlib
 
         from matplotlib.pyplot as plt
+
+1) variables
+2) functions
+3) oops (pending)
+4) numpy
+5) pandas
+6) matplotlib
+7) list
+8) tuple
+9) set
+10) dict
