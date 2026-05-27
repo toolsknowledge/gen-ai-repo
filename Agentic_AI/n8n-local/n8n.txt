@@ -1,0 +1,68 @@
+N8N
+***
+    predefined automation agent
+    automate the admin tasks
+    Ex.
+        Gmail
+        Facebook
+        Twitter
+        Whatsapp
+        Telegram
+        --
+        --
+        --
+    we can integrate with LLM'S
+
+Local
+*****
+1) install docker & docker compose (local)
+
+    > docker --version
+    > docker compose version
+
+2) create "docker-compose.yml" file
+        docker-compose.yml
+
+        n8n-local
+            docker-compose.yml
+
+3) get ssl id
+        openssl rand -hex 16
+
+        map ssl id in docker-compose.yml. (N8N_ENCRYPTION_KEY)
+
+4) start local n8n
+        docker compose up -d
+        docker compose logs -f n8n
+
+5) install ngrok (tunnel between services to n8n)
+    
+    > brew install ngrok (mac)
+    > https://ngrok.com/download/windows?tab=download (windows)
+
+    ngrok --version
+
+6) get auth keys from ngrok
+     https://ngrok.com 
+
+     ngrok config add-authtoken 3E9YSVsKcMRrXEpmtcGujvR18Vz_3uPMCFccZKiKdDgYo1MaV
+     ngrok http 5678
+
+     output:
+            https://outdoors-defame-stench.ngrok-free.dev (Forwarding Link)
+            http://localhost:5678
+
+    link above Forwarding Link in docker-compose.yml file
+    WEBHOOK_URL
+
+    > docker compose down && docker compose up -d
+
+7) create google acc auth id's
+
+        https://console.cloud.google.com
+
+        project name : n8n-local
+
+
+       
+
