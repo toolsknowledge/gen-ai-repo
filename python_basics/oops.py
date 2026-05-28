@@ -4,41 +4,42 @@
 # constructor,used to initilize the instance variables
 # instance members are availble in separate copies for each object
 
-class Test:
-    # no para - no return type
-    def add1(self):
-        num1 = 200
-        num2 = 100
-        res = num1 + num2
-        print(res)
 
-    # no para - with return type
-    def add2(self):
-        num1 = 200
-        num2 = 100
-        res = num1 + num2
-        return res
+# class Test:
+#     # no para - no return type
+#     def add1(self):
+#         num1 = 200
+#         num2 = 100
+#         res = num1 + num2
+#         print(res)
+
+#     # no para - with return type
+#     def add2(self):
+#         num1 = 200
+#         num2 = 100
+#         res = num1 + num2
+#         return res
     
-    # with para - no return type
-    def add3(self,param1,param2):
-        res = param1 + param2
-        print(res)
+#     # with para - no return type
+#     def add3(self,param1,param2):
+#         res = param1 + param2
+#         print(res)
     
-    # with para - with return type
-    def add4(self,param1,param2):
-        res = param1 + param2
-        return res
+#     # with para - with return type
+#     def add4(self,param1,param2):
+#         res = param1 + param2
+#         return res
 
-obj1 = Test()
-obj1.add1()
+# obj1 = Test()
+# obj1.add1()
 
-x = obj1.add2()
-print(x)
+# x = obj1.add2()
+# print(x)
 
-obj1.add3(200,100)
+# obj1.add3(200,100)
 
-y = obj1.add4(200,100)
-print(y)
+# y = obj1.add4(200,100)
+# print(y)
 
 # class Test:
 #     def __init__(self,param1,param2):
@@ -74,3 +75,136 @@ print(y)
 # y = obj1.num2
 # res = x + y
 # print(res)
+
+# inheritance
+# getting the data from parent class to child class called as inheritance
+
+# single level inheritance
+# class Parent:
+#     def __init__(self):
+#         self.num1 = 200
+
+# class Child(Parent):
+#     def __init__(self):
+#         super().__init__()
+#         self.num2 = 100
+
+# obj = Child()
+# x = obj.num1
+# y = obj.num2
+# res = x + y
+# print(res)
+
+# single level inheritance
+# class Parent:
+#     def __init__(self,num1):
+#         self.num1 = num1
+# class Child(Parent):
+#     def __init__(self, num1,num2):
+#         super().__init__(num1)
+#         self.num2 = num2
+
+# obj = Child(200,100)
+# x = obj.num1
+# y = obj.num2
+# res = x + y
+# print(res)
+
+
+# multilevel inheritance
+# class Parent:
+#     def test1(self):
+#         print("Parent !!!")
+# class Child(Parent):
+#     def test2(self):
+#         print("Child !!!")
+# class Subchild(Child):
+#     def test3(self):
+#         print("Subchild !!!")
+
+# obj = Subchild()
+# obj.test1()
+# obj.test2()
+# obj.test3()
+
+# multilevel inheritance
+# class Parent:
+#     def test1(self):
+#         print("Hello")
+
+# class Child(Parent):
+#     def test2(self):
+#         super().test1()
+
+# class Subchild(Child):
+#     def test3(self):
+#         super().test2()
+
+# obj = Subchild()
+# obj.test3()
+
+# multiple inheritance
+# class Parent1:
+#     def test1(self):
+#         print("Parent1")
+
+# class Parent2:
+#     def test2(self):
+#         print("Parent2")
+
+# class Child(Parent1,Parent2):
+#     pass
+
+# obj = Child()
+# obj.test1()
+# obj.test2()
+
+# hirarichal
+# class Parent:
+#     def test1(self):
+#         print("Parent !!!")
+# class Child1(Parent):
+#     def test2(self):
+#         print("Child1 !!!")
+# class Child2(Parent):
+#     def test2(self):
+#         print("Child2 !!!")
+
+# obj1 = Child1()
+# obj1.test1()
+# obj1.test2()
+
+# obj2 = Child2()
+# obj2.test1()
+# obj2.test2()
+
+# hybrid (multiple + hirarichal)
+# class Parent:
+#     def test1(self):
+#         print("Parent !!!")
+# class Child1(Parent):
+#     def test2(self):
+#         print("Child1 !!!")
+# class Child2(Parent):
+#     def test3(self):
+#         print("Child2 !!!")
+# class Subchild(Child1,Child2):
+#     def test4(self):
+#         print("Subchild !!!")
+# obj = Subchild()
+# obj.test1()
+# obj.test2()
+# obj.test3()
+# obj.test4()
+
+# overriding
+class Parent:
+    def db_conn(self):
+        print("oracle conn soon...!")
+
+class Child(Parent):
+    def db_conn(self):
+        print("mongodb conn soon...!")
+
+obj = Child()
+obj.db_conn()
