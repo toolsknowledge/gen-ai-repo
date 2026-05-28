@@ -1,0 +1,164 @@
+{
+  "name": "04 - Email Alert (Webhook → Gmail → Confirmation response)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "send-alert",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "aa1e1f9e-0004-4004-0004-000000000001",
+      "name": "Receive Alert Request",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "webhookId": "email-alert-webhook",
+      "notes": "POST body expected: { \"to\": \"someone@email.com\", \"subject\": \"Alert!\", \"message\": \"Something happened\" }"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-001",
+              "name": "to_email",
+              "value": "={{ $json.body.to ?? 'default@example.com' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-002",
+              "name": "subject",
+              "value": "={{ $json.body.subject ?? '[n8n Alert] No subject provided' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-003",
+              "name": "message",
+              "value": "={{ $json.body.message ?? 'No message body provided' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-004",
+              "name": "triggered_at",
+              "value": "={{ $now.toISO() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa1e1f9e-0004-4004-0004-000000000002",
+      "name": "Validate & Extract Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [480, 300]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.to_email }}",
+        "subject": "={{ $json.subject }}",
+        "emailType": "html",
+        "message": "=<html><body>\n<h2>🔔 n8n Alert Notification</h2>\n<p><strong>Time:</strong> {{ $json.triggered_at }}</p>\n<hr/>\n<p>{{ $json.message }}</p>\n<hr/>\n<p style=\"color: gray; font-size: 12px;\">Sent automatically by your n8n workflow</p>\n</body></html>",
+        "options": {}
+      },
+      "id": "aa1e1f9e-0004-4004-0004-000000000003",
+      "name": "Send Gmail Alert",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [710, 300],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_WITH_YOUR_GMAIL_CREDENTIAL_ID",
+          "name": "Gmail account"
+        }
+      },
+      "notes": "⚠️ Set up Gmail OAuth credentials first. Go to: Credentials → New → Gmail OAuth2. See guide for Google Cloud setup steps."
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-001",
+              "name": "status",
+              "value": "sent",
+              "type": "string"
+            },
+            {
+              "id": "field-002",
+              "name": "email_id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "field-003",
+              "name": "sent_to",
+              "value": "={{ $('Validate & Extract Fields').item.json.to_email }}",
+              "type": "string"
+            },
+            {
+              "id": "field-004",
+              "name": "sent_at",
+              "value": "={{ $now.toISO() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa1e1f9e-0004-4004-0004-000000000004",
+      "name": "Build Confirmation",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [940, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "aa1e1f9e-0004-4004-0004-000000000005",
+      "name": "Return Confirmation",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1170, 300]
+    }
+  ],
+  "connections": {
+    "Receive Alert Request": {
+      "main": [
+        [{ "node": "Validate & Extract Fields", "type": "main", "index": 0 }]
+      ]
+    },
+    "Validate & Extract Fields": {
+      "main": [
+        [{ "node": "Send Gmail Alert", "type": "main", "index": 0 }]
+      ]
+    },
+    "Send Gmail Alert": {
+      "main": [
+        [{ "node": "Build Confirmation", "type": "main", "index": 0 }]
+      ]
+    },
+    "Build Confirmation": {
+      "main": [
+        [{ "node": "Return Confirmation", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": ["email", "gmail", "webhook", "alert"],
+  "triggerCount": 0,
+  "meta": {
+    "description": "EMAIL AUTOMATION: POST to a webhook with recipient, subject, and message → n8n sends a formatted HTML email via Gmail → returns a confirmation. Requires Gmail OAuth2 credentials. Test with: curl -X POST http://localhost:5678/webhook-test/send-alert -H 'Content-Type: application/json' -d '{\"to\": \"you@gmail.com\", \"subject\": \"Test Alert\", \"message\": \"This is a test from n8n!\"}'",
+    "templateCredsSetupCompleted": false
+  }
+}
