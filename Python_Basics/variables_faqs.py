@@ -6,14 +6,24 @@
     list, dict,set -- True / False
 """
 
-flag = ""
-if flag:
-    print("Hello")
-else:
-    print("Gen AI")
+# num1 = 1000
+# num2 = 1000
+# print(num1 == num2)
+# print(id(num1))
+# print(id(num2))
+# print(num1 is num2)
 
-res = "Hello" if flag else "Gen AI"
-print(res)
+
+
+
+# flag = ""
+# if flag:
+#     print("Hello")
+# else:
+#     print("Gen AI")
+
+# res = "Hello" if flag else "Gen AI"
+# print(res)
 
 # x = "10"
 # y = 5
