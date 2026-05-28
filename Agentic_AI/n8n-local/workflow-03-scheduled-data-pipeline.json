@@ -1,0 +1,217 @@
+{
+  "name": "03 - Scheduled Data Pipeline (Every hour → Fetch API → Save to file)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "minutesInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "aa1e1f9e-0003-4003-0003-000000000001",
+      "name": "Every Hour",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "notes": "Runs automatically every hour. For testing, click 'Execute Workflow' to run it manually right now."
+    },
+    {
+      "parameters": {
+        "url": "https://api.open-meteo.com/v1/forecast",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "latitude", "value": "12.9716" },
+            { "name": "longitude", "value": "77.5946" },
+            { "name": "current", "value": "temperature_2m,wind_speed_10m,weathercode" },
+            { "name": "timezone", "value": "Asia/Kolkata" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa1e1f9e-0003-4003-0003-000000000002",
+      "name": "Fetch Weather (Bangalore)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [480, 300],
+      "notes": "Uses the free Open-Meteo API — no API key required! Fetches weather for Bangalore. Change latitude/longitude for your city."
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-001",
+              "name": "city",
+              "value": "Bangalore",
+              "type": "string"
+            },
+            {
+              "id": "field-002",
+              "name": "temperature_celsius",
+              "value": "={{ $json.current.temperature_2m }}",
+              "type": "number"
+            },
+            {
+              "id": "field-003",
+              "name": "wind_speed_kmh",
+              "value": "={{ $json.current.wind_speed_10m }}",
+              "type": "number"
+            },
+            {
+              "id": "field-004",
+              "name": "collected_at",
+              "value": "={{ $now.toISO() }}",
+              "type": "string"
+            },
+            {
+              "id": "field-005",
+              "name": "weather_code",
+              "value": "={{ $json.current.weathercode }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa1e1f9e-0003-4003-0003-000000000003",
+      "name": "Extract Key Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [710, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "cond-001",
+              "leftValue": "={{ $json.temperature_celsius }}",
+              "rightValue": 35,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "aa1e1f9e-0003-4003-0003-000000000004",
+      "name": "Is it Hot? (>35°C)",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [940, 300],
+      "notes": "If temperature >= 35°C → goes to 'Hot Alert' branch. Otherwise → goes to 'Normal Log' branch."
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-001",
+              "name": "alert",
+              "value": "🔥 HOT WEATHER ALERT",
+              "type": "string"
+            },
+            {
+              "id": "field-002",
+              "name": "message",
+              "value": "=Temperature in {{ $json.city }} is {{ $json.temperature_celsius }}°C — very hot! Stay hydrated.",
+              "type": "string"
+            },
+            {
+              "id": "field-003",
+              "name": "data",
+              "value": "={{ $json }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa1e1f9e-0003-4003-0003-000000000005",
+      "name": "Hot Alert",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [1170, 200],
+      "notes": "When it's very hot — you could add an email or Slack node after this!"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-001",
+              "name": "status",
+              "value": "normal",
+              "type": "string"
+            },
+            {
+              "id": "field-002",
+              "name": "message",
+              "value": "=Weather in {{ $json.city }}: {{ $json.temperature_celsius }}°C — normal conditions.",
+              "type": "string"
+            },
+            {
+              "id": "field-003",
+              "name": "data",
+              "value": "={{ $json }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa1e1f9e-0003-4003-0003-000000000006",
+      "name": "Normal Log",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [1170, 420]
+    }
+  ],
+  "connections": {
+    "Every Hour": {
+      "main": [
+        [{ "node": "Fetch Weather (Bangalore)", "type": "main", "index": 0 }]
+      ]
+    },
+    "Fetch Weather (Bangalore)": {
+      "main": [
+        [{ "node": "Extract Key Fields", "type": "main", "index": 0 }]
+      ]
+    },
+    "Extract Key Fields": {
+      "main": [
+        [{ "node": "Is it Hot? (>35°C)", "type": "main", "index": 0 }]
+      ]
+    },
+    "Is it Hot? (>35°C)": {
+      "main": [
+        [{ "node": "Hot Alert", "type": "main", "index": 0 }],
+        [{ "node": "Normal Log", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": ["data-pipeline", "weather", "scheduled", "if-else"],
+  "triggerCount": 0,
+  "meta": {
+    "description": "DATA PIPELINE: Runs every hour, fetches Bangalore weather from a free API (no key needed), extracts key fields, and branches based on temperature. Shows: Schedule trigger, HTTP Request, Set, and IF/Else nodes. Add email/Slack nodes to the 'Hot Alert' branch to get notified!",
+    "templateCredsSetupCompleted": true
+  }
+}

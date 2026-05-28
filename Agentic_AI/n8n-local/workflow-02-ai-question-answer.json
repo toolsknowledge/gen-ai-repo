@@ -1,0 +1,165 @@
+{
+  "name": "02 - AI Q&A (POST question → OpenAI → JSON answer)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ask-ai",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "aa1e1f9e-0002-4002-0002-000000000001",
+      "name": "Receive Question",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "webhookId": "ai-qa-webhook",
+      "notes": "Send a POST request to this webhook with body: { \"question\": \"What is machine learning?\" }"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-001",
+              "name": "question",
+              "value": "={{ $json.body.question ?? 'No question provided' }}",
+              "type": "string"
+            },
+            {
+              "id": "field-002",
+              "name": "received_at",
+              "value": "={{ $now.toISO() }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa1e1f9e-0002-4002-0002-000000000002",
+      "name": "Extract Question",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [480, 300]
+    },
+    {
+      "parameters": {
+        "resource": "chat",
+        "operation": "create",
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are a helpful assistant. Answer the user's question clearly and concisely in 2-3 sentences.",
+              "role": "system"
+            },
+            {
+              "content": "={{ $json.question }}",
+              "role": "user"
+            }
+          ]
+        },
+        "options": {
+          "maxTokens": 300,
+          "temperature": 0.7
+        }
+      },
+      "id": "aa1e1f9e-0002-4002-0002-000000000003",
+      "name": "Ask OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [710, 300],
+      "credentials": {
+        "openAiApi": {
+          "id": "REPLACE_WITH_YOUR_OPENAI_CREDENTIAL_ID",
+          "name": "OpenAI account"
+        }
+      },
+      "notes": "⚠️ Set up OpenAI credentials first: Credentials → New → OpenAI → paste your API key"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "field-001",
+              "name": "answer",
+              "value": "={{ $json.choices[0].message.content }}",
+              "type": "string"
+            },
+            {
+              "id": "field-002",
+              "name": "model_used",
+              "value": "={{ $json.model }}",
+              "type": "string"
+            },
+            {
+              "id": "field-003",
+              "name": "tokens_used",
+              "value": "={{ $json.usage.total_tokens }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa1e1f9e-0002-4002-0002-000000000004",
+      "name": "Format AI Response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [940, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {
+          "responseCode": 200
+        }
+      },
+      "id": "aa1e1f9e-0002-4002-0002-000000000005",
+      "name": "Send AI Answer",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1170, 300]
+    }
+  ],
+  "connections": {
+    "Receive Question": {
+      "main": [
+        [{ "node": "Extract Question", "type": "main", "index": 0 }]
+      ]
+    },
+    "Extract Question": {
+      "main": [
+        [{ "node": "Ask OpenAI", "type": "main", "index": 0 }]
+      ]
+    },
+    "Ask OpenAI": {
+      "main": [
+        [{ "node": "Format AI Response", "type": "main", "index": 0 }]
+      ]
+    },
+    "Format AI Response": {
+      "main": [
+        [{ "node": "Send AI Answer", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": ["ai", "openai", "webhook"],
+  "triggerCount": 0,
+  "meta": {
+    "description": "AI WORKFLOW: POST a question to a webhook, get an AI-powered answer back. Requires OpenAI API key. Test with: curl -X POST http://localhost:5678/webhook-test/ask-ai -H 'Content-Type: application/json' -d '{\"question\": \"What is n8n?\"}'",
+    "templateCredsSetupCompleted": false
+  }
+}
