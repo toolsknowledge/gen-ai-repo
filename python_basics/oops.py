@@ -198,13 +198,99 @@
 # obj.test4()
 
 # overriding
-class Parent:
-    def db_conn(self):
-        print("oracle conn soon...!")
+# class Parent:
+#     def db_conn(self):
+#         print("oracle conn soon...!")
 
-class Child(Parent):
-    def db_conn(self):
-        print("mongodb conn soon...!")
+# class Child(Parent):
+#     def db_conn(self):
+#         print("mongodb conn soon...!")
 
-obj = Child()
-obj.db_conn()
+# obj = Child()
+# obj.db_conn()
+
+# class level variable
+# class Test:
+#     cmp = "Infosys !!!"
+
+#     def __init__(self):
+#         pass
+
+# obj1 = Test()
+# obj2 = Test()
+# print(Test.cmp)
+# print(obj1.cmp)
+# print(obj2.cmp)
+
+# Test.cmp = "Accenture !!!"
+# print(Test.cmp)
+
+# class Test:
+#     name = "Hello"
+
+#     @classmethod
+#     def change_name(cls):
+#         cls.name = "Welcome"
+
+# print(Test.name)
+# Test.change_name()
+# print(Test.name)
+
+# Encapsulation
+# class Bank:
+#     def __init__(self,balance):
+#         self.__balance = balance
+#     def deposit(self,amount):
+#         self.__balance += amount
+#         print(self.__balance)
+#     def withdraw(self,amount):
+#         self.__balance -= amount
+#         print(self.__balance)
+
+# bank = Bank(5000)
+# bank.deposit(5000)
+# bank.withdraw(5000)
+
+
+# from abc import ABC, abstractmethod
+# class Test1(ABC):
+#     @abstractmethod
+#     def m1(self):
+#         pass
+# class Test2(Test1):
+#     def m1(self):
+#         print("Hello")
+
+# obj = Test2()
+# obj.m1()
+
+# class Demo:
+#     def __str__(self):
+#         return "Dunder Methods !!!"
+
+# obj = Demo()
+# print(obj)
+
+
+# add = lambda num1,num2 : num1 + num2
+# print(add(20,10))
+
+# bigger = lambda num1,num2 : num1 if num1>num2 else num2
+# print(bigger(200,100))
+
+# res = lambda num1 : "even" if num1%2 == 0 else "odd"
+# print(res(10))
+# print(res(9))
+
+# res = lambda num1 : num1%2==0
+# print(res(10))
+# print(res(9))
+
+
+# res = tuple(map(lambda num1: num1*num1, [10,20,30,40,50]))
+# print(res)
+
+nums = [1,2,3,4,5]
+# print(list(filter(lambda num1: num1%2 == 0, nums)))
+# from functools import reduce
+# print(reduce(lambda num1,num2:num1+num2,nums))
