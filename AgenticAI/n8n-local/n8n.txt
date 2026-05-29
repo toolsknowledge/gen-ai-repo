@@ -64,5 +64,51 @@ Local
         project name : n8n-local
 
 
+step 1.
+    install nodejs
+        we can configure n8n with the help of nodejs
+        Note : version must be > 20.x
+        website : https://nodejs.org/en/download
+        node --version
+        npm --version
+
+step 2.
+    install n8n
+
+    > npm install -g n8n
+    > n8n --version
+
+step 3.
+    start n8n service
+
+    > n8n start
+
+step 4.
+        launch n8n with the help of below end point
+        http://localhost:5678
+
+step 5.
+        generate "OpenAPI" key
+
+        https://platform.openai.com/api-keys
+
+step 6.
+        generate google auth keys
+
+        https://console.cloud.google.com/
+
+        client id
+        secrete key
+
+
+
+
+
+
+
+
+
+
+
        
 
