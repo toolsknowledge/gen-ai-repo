@@ -215,6 +215,13 @@
 			"typeName": "instance_page_state"
 		},
 		{
+			"meta": {},
+			"id": "page:ptD-gNnMuUEv7QqU_ULWq",
+			"name": "Page 4",
+			"index": "a4BrP5LV",
+			"typeName": "page"
+		},
+		{
 			"x": 599.9674072265625,
 			"y": 391.18487548828125,
 			"rotation": 0,
@@ -275,8 +282,8 @@
 			"typeName": "binding"
 		},
 		{
-			"x": 4423.528693561757,
-			"y": -308.2568904078617,
+			"x": 3758.1747606071026,
+			"y": -5903.23288942763,
 			"z": 0.05,
 			"meta": {},
 			"id": "camera:page:page",
@@ -377,20 +384,18 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 153.3039482143783,
-			"y": -953.7510162057276,
-			"z": 0.3295808386710809,
+			"x": 0,
+			"y": 0,
+			"z": 1,
 			"meta": {},
 			"id": "camera:page:LL9KGOxqO3qXP9xO80UU3",
 			"typeName": "camera"
 		},
 		{
-			"editingShapeId": "shape:BiE4qJ86UBu3jD_pNaNFY",
+			"editingShapeId": null,
 			"croppingShapeId": null,
-			"selectedShapeIds": [
-				"shape:BiE4qJ86UBu3jD_pNaNFY"
-			],
-			"hoveredShapeId": "shape:BiE4qJ86UBu3jD_pNaNFY",
+			"selectedShapeIds": [],
+			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -662,8 +667,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": -83.33333002196433,
-			"y": -61.805553099623594,
+			"x": 0,
+			"y": 0,
 			"z": 1,
 			"meta": {},
 			"id": "camera:page:uMgiURXuDR4RmPK3s599s",
@@ -822,6 +827,21 @@
 			"name": "Page 2",
 			"index": "a2kUGdGl",
 			"typeName": "page"
+		},
+		{
+			"editingShapeId": "shape:Vqt8crTqKzx63dN7HZQXB",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:Vqt8crTqKzx63dN7HZQXB"
+			],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:ptD-gNnMuUEv7QqU_ULWq",
+			"pageId": "page:ptD-gNnMuUEv7QqU_ULWq",
+			"typeName": "instance_page_state"
 		},
 		{
 			"x": 432.63671875,
@@ -1175,6 +1195,14 @@
 			"typeName": "shape"
 		},
 		{
+			"x": 20.83333250549123,
+			"y": -552.7777558123646,
+			"z": 1,
+			"meta": {},
+			"id": "camera:page:ptD-gNnMuUEv7QqU_ULWq",
+			"typeName": "camera"
+		},
+		{
 			"meta": {},
 			"id": "page:page",
 			"name": "Page 1",
@@ -1231,7 +1259,7 @@
 			"duplicateProps": null,
 			"cameraState": "idle",
 			"id": "instance:instance",
-			"currentPageId": "page:uMgiURXuDR4RmPK3s599s",
+			"currentPageId": "page:ptD-gNnMuUEv7QqU_ULWq",
 			"typeName": "instance"
 		},
 		{
@@ -1285,6 +1313,60 @@
 			"name": "Page 3",
 			"index": "a3HL80wV",
 			"typeName": "page"
+		},
+		{
+			"x": 237.73870849609375,
+			"y": 90.0878849029541,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:paU0l5ofJYOzoe2NQYsPQ",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 49.844398498535156,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Jira"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "****"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:ptD-gNnMuUEv7QqU_ULWq",
+			"index": "a1SCU2kG",
+			"typeName": "shape"
 		},
 		{
 			"x": 132.33071899414062,
@@ -1517,6 +1599,228 @@
 			},
 			"parentId": "page:LL9KGOxqO3qXP9xO80UU3",
 			"index": "aFtEZBoV",
+			"typeName": "shape"
+		},
+		{
+			"x": 49.81011199951172,
+			"y": 160.72590827941895,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Vqt8crTqKzx63dN7HZQXB",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 667.9650268554688,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "new email triggered"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "scan the email  (n8n) - read sub,body,.... (unique id)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "avoid duplicate tickets (n8n)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "LLM (read email message, p1,p2,p3,p4) "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "connect to Jira"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "generate new ticket"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "-> generated the flow with the help of claude (json)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "-> import json in n8n"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "-> configure credentials"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "-> test the pipe line"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "> n8n start"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "> http://localhost:5678/"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:ptD-gNnMuUEv7QqU_ULWq",
+			"index": "a2nXcSAV",
 			"typeName": "shape"
 		},
 		{
