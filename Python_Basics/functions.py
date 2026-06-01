@@ -145,16 +145,85 @@
 #     pass
 
 
-def test_func(**param1):
-    print(param1)
+# def test_func(**param1):
+#     print(param1)
 
-test_func(name="Samba",sub="Gen AI")
+# test_func(name="Samba",sub="Gen AI")
+
+# name - normal parameter
+# course - default parameter
+# skills - tuple
+# details - dictionary
+# def test_func(name,
+#               course="Python",
+#               *skills,
+#               **details):
+#     print(name)
+#     print(course)
+#     print(skills)
+#     print(details)
+
+# test_func("Samba","Gen AI","ML","DL","NLP",city="Hyderabad")
+
+# normal --> default --> tuples ---> dict
+
+# lambda - function without name
+# "lambda" is the keyword, used to declare the lambda functions
+
+# def add(num1,num2):
+#     return num1 + num2
+# print(add(200,100))
 
 
+# add = lambda num1,num2:num1 + num2
+# print(add(200,100))
 
 
+# find the bigger number
+# big = lambda num1,num2: num1 if num1>num2 else num2
+# print(big(200,100))
 
+# even (or) odd
 
+# str = "Hello" len(str) --> 5
 
+# res = lambda str:len(str)
+# print(res("Python"))
 
+"""
+             map()
+ [1,2,3,4,5] ---> [10,20,30,40,50]
+    map() - predefined function, used to manipulate "all list elements"
 
+                                filter()
+    [100,200,300,400,500]  > 300 ---> [400,500]
+
+    filter() - used to apply conditions on list elements
+    
+
+"""
+
+# print(list(map(lambda param1: param1*100, [1,2,3,4,5])))
+
+# list1 = [100,200,300,400,500]
+# print(list(filter(lambda param1:param1>300,list1)))
+
+# [1,2,3,4,5] - filter only "even" elements
+
+# sorted() - sort the list
+# names = ["Ravi","Krishna","A","Python"]
+# print(sorted(names,key=lambda x:len(x)))
+
+# sort based on marks
+# students = [
+#     ("Std1",85),
+#     ("Std2",92),
+#     ("Std3",78)
+# ]
+
+# print(sorted(students,key=lambda t1:t1[1]))
+
+#           reduce()
+# [1,2,3,4,5] -- [15]
+from functools import reduce
+print(reduce(lambda num1,num2: num1+num2, [1,2,3,4,5]))
