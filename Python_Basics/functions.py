@@ -225,5 +225,101 @@
 
 #           reduce()
 # [1,2,3,4,5] -- [15]
-from functools import reduce
-print(reduce(lambda num1,num2: num1+num2, [1,2,3,4,5]))
+# from functools import reduce
+# print(reduce(lambda num1,num2: num1+num2, [1,2,3,4,5]))
+
+
+# == (compares the "values")
+# "is" checks the "memory locations"
+# list1 = [10,20,30]
+# #list2 = [10,20,30]
+# list2 = list1
+# print(list1 == list2)
+
+# print(id(list1))
+# print(id(list2))
+# print(list1 is list2)
+
+# -5 to 256 (cache) (never stores into heap area(ram)
+# a = 100
+# b = 100
+# print(a == b)
+# print(id(a))
+# print(id(b))
+# print(a is b)
+
+# a = 10000
+# b = 10000
+# print(id(a))
+# print(id(b))
+
+# a1 = int("10000")
+# b1 = int("10000")
+# print(id(a1))
+# print(id(b1))
+
+# print(10 == 10)
+# print("Hello" == "Hello")
+# print([10] == [10])
+# print(True == True)
+# print(10.1 == 10.1)
+# print((10) == (10))
+# print({"name": "gen ai"} == {"name": "gen ai"})
+# print(None == None)
+
+# LEGB
+# L - Local
+# E - Enclosing
+# G - Global
+# B - Built-in
+
+# num1 = 200
+# def test_func():
+#     #num1 = 100
+#     print(num1)
+
+# test_func()
+
+# num1 = 100
+# def test_func():
+#     global num1
+#     print(num1)
+#     num1 = 200
+
+# test_func()
+# print(num1)
+
+# num1 = 300
+# def outer():
+#     #num1 = 100
+
+#     def inner():
+#         #num1 = 200
+#         print(num1)
+#     inner()
+# outer()
+
+
+# def outer():
+#     num1 = 100
+
+#     def inner():
+#         nonlocal num1
+#         num1 = 200
+#     inner()
+#     print(num1)
+# outer()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
