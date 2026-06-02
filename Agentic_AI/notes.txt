@@ -1,0 +1,95 @@
+1) multi agent communication
+       (two examples) 
+        azure
+
+2) indepth RAG
+
+3) MCP indepth
+
+4) LangChain
+   LangGraph
+   CrewAI
+   Hugging Face
+   --
+   --
+5) ChromaDB --> SQL / NoSQL / 
+
+
+
+1) agentic ai
+2) RAG
+3) MCP Server & MCP Client
+4) Lang Graph
+5) VectorDB
+6) Multi Agent Appln
+
+                    Resume 
+
+                    ReviewAgent
+                    (JOB Description)
+
+       Selected                             Not Selected
+
+       InterviewAgent                       Feedback Agent
+
+       generate questions from              Prepare Detailed Feedback
+       Resume
+
+       Ask question
+
+                    EmailAgent
+
+                    Feedback Email   
+
+
+
+
+                     ReviewAgent (GitHub)
+
+Security                Injection
+
+SecurityAgent           DBAgent
+
+         TestingAgent
+
+
+         ReportAgent
+
+                  LangGraph / LangChain. 
+                        MCP Client
+                  MCP Server
+
+
+ChromaDB
+
+RAG
+
+Azure + CICD
+
+                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
