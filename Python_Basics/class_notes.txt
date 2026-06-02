@@ -1,0 +1,68 @@
+Variable
+********
+    "Variables" are used to "store the data"
+    Ex.
+            int
+            string
+            boolean
+            ---
+            ---
+            ---
+    datatype representing "type of data"
+    python supports below datatypes
+    1) int
+    2) str
+    3) bool
+    4) list
+    5) tuple
+    6) dict
+    7) set
+    8) None
+
+print() is the "predefined function", used to display "data on console"
+
+"rich" library, used to customize the console outputs
+
+"pip" is the tool, used to download the libraries
+
+> pip install rich
+
+
+Step 0.
+        create directory(folder) on desktop
+            gen-ai-repo
+                python_basics
+                    requirements.txt
+
+Step 0.1
+        open with VSCode
+
+Step 1.
+        create virtual environment
+
+        > python3 -m venv venv314
+                (or)
+        > python -m venv venv314
+
+Step 2.
+        activate virtual environment
+
+        > source venv314/bin/activate (mac book)
+                (or)
+        > venv314\Scripts\activate (windows)
+
+Step 3.
+        create requirements.txt file with "rich"
+
+Step 4.
+        install requirements.txt file
+
+        > pip install -r requirements.txt
+
+Step 5.
+        create variables.py
+
+Step 6.
+        execute 
+
+        > python variables.py
