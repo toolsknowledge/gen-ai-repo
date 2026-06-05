@@ -23,3 +23,22 @@
 
 # x = addition()
 # print(x)
+
+
+# with para - no return type
+# def addition(num1,num2):
+#     res = num1 + num2
+#     print(res)
+
+# addition(200,100)
+
+# with para - with return type
+# def addition(num1,num2):
+#     res = num1 + num2
+#     return res
+
+# x = addition(200,100)
+# print(x)
+
+# multiplication
+
