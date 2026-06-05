@@ -1,0 +1,236 @@
+You are a Principal AI Architect, Senior Full Stack Architect, LangGraph Expert, MCP Expert, FastAPI Expert, Azure Cloud Architect, PostgreSQL Architect, ChromaDB Expert, and Production Engineering Expert.
+
+I want to build a production-grade Multi-Agent Resume Screening and Interview Automation Platform from scratch.
+
+Tech Stack:
+
+Frontend:
+
+* React
+* Vite
+* TypeScript
+* Material UI
+
+Backend:
+
+* FastAPI
+* Python 3.12
+* SQLAlchemy
+* Alembic
+* JWT Authentication
+
+AI Stack:
+
+* Claude API
+* LangGraph
+* LangChain
+* MCP (Model Context Protocol)
+* RAG
+
+Databases:
+
+* PostgreSQL
+* ChromaDB
+
+Storage:
+
+* Azure Blob Storage
+
+Deployment:
+
+* Docker
+* Docker Compose
+* Azure Container Apps
+
+Authentication:
+
+* Google OAuth
+* Email Password Login
+
+Users:
+
+* Recruiter / HR only
+
+Supported File Types:
+
+* PDF
+* DOCX
+
+Job Description Input:
+
+* Upload JD
+* Paste JD
+
+Agents:
+
+Agent-1 Resume Screening Agent
+
+Responsibilities:
+
+* Parse Resume
+* Parse JD
+* Generate Embeddings
+* Retrieve Relevant Context
+* Skill Match Analysis
+* Experience Match Analysis
+* Generate Overall Match Percentage
+* Generate Recruiter Summary
+* Recommend Shortlist or Reject
+
+Agent-2 Interview Question Generator
+
+Responsibilities:
+
+* Analyze Resume
+* Analyze JD
+* Generate Resume-Based Questions
+* Generate HR Questions
+* Categorize Questions
+* Store Questions
+
+Agent-3 Feedback Agent
+
+Responsibilities:
+
+* Analyze Candidate Gaps
+* Generate Missing Skills Report
+* Generate Resume Improvement Suggestions
+* Generate Rejection Feedback
+
+Agent-4 Communication Agent
+
+Responsibilities:
+
+* Send Shortlist Email
+* Send Rejection Email
+* Send Interview Invitation Email
+* Maintain Email Audit Logs
+
+Storage Strategy:
+
+Azure Blob Storage:
+
+* Resume Files
+* JD Files
+* Generated Reports
+
+PostgreSQL:
+
+* User Data
+* Candidate Metadata
+* Resume Metadata
+* JD Metadata
+* Match Results
+* Interview Questions
+* Feedback Reports
+* Email Logs
+
+ChromaDB:
+
+* Resume Embeddings
+* JD Embeddings
+* Chunk Metadata
+
+Architecture Requirements:
+
+* Clean Architecture
+* Repository Pattern
+* Service Layer Pattern
+* Dependency Injection
+* SOLID Principles
+* Production Logging
+* Structured Error Handling
+* OpenAPI Documentation
+* Unit Testing
+* Integration Testing
+* Docker Support
+* CI/CD Ready
+
+Development Rules:
+
+1. Never skip steps.
+2. Never assume files exist.
+3. Create every folder and file explicitly.
+4. Explain why each file is created.
+5. Explain why each dependency is installed.
+6. Use enterprise coding standards.
+7. Follow industry best practices.
+8. Build phase by phase.
+9. Do not jump to deployment.
+10. Deployment should be the final phase.
+
+Development Phases:
+
+Phase-1:
+Environment Setup
+
+Phase-2:
+Project Structure Design
+
+Phase-3:
+Database Design
+
+Phase-4:
+Authentication
+
+Phase-5:
+File Upload Module
+
+Phase-6:
+Azure Blob Storage Integration
+
+Phase-7:
+Resume Parsing Module
+
+Phase-8:
+ChromaDB Setup
+
+Phase-9:
+Embedding Pipeline
+
+Phase-10:
+RAG Pipeline
+
+Phase-11:
+Agent-1 Development
+
+Phase-12:
+Agent-2 Development
+
+Phase-13:
+Agent-3 Development
+
+Phase-14:
+Agent-4 Development
+
+Phase-15:
+LangGraph Workflow
+
+Phase-16:
+MCP Integration
+
+Phase-17:
+Testing Strategy
+
+Phase-18:
+Dockerization
+
+Phase-19:
+Azure Container Apps Deployment
+
+For every phase provide:
+
+* Objective
+* Architecture Diagram
+* Folder Structure
+* Files to Create
+* Commands to Execute
+* Complete Code
+* Testing Procedure
+* Expected Output
+* Common Mistakes
+* Production Considerations
+
+Start with Phase-1 only.
+
+Do not move to the next phase until Phase-1 is fully completed and validated.
