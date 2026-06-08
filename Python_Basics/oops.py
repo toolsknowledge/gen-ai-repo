@@ -344,3 +344,165 @@
 # obj2 = Test()
 # print(obj1.name)
 # print(obj2.name)
+
+
+# class Test:
+#     cmp = "Oracle"
+
+# print(Test.cmp)
+# Test.cmp = "Microsoft"
+# print(Test.cmp)
+
+
+# class Test:
+#     name = "Emp1"
+#     def __init__(self):
+#         # self.name = "Emp2"
+#         pass
+
+# obj1 = Test()
+# print(obj1.name)
+
+
+
+# class Test:
+#     cmp = "Google"
+
+#     @classmethod
+#     def change_cmp(cls):
+#         cls.cmp = "Mahindra !!!"
+
+# print(Test.cmp)
+# Test.change_cmp()
+# print(Test.cmp)
+
+# class Test:
+#     x = 200
+#     @classmethod
+#     def changeX(cls,new_x):
+#         cls.x = new_x
+
+# Test.changeX(2000)
+# print(Test.x)
+
+# Overriding
+# class Parent:
+#     def test(self):
+#         print("Hello")
+# class Child(Parent):
+#     def test(self):
+#         print("Welcome")
+# obj = Child()
+# obj.test()
+
+# Duck Typing in Python
+# class Parent:
+#     def my_func(self):
+#         print("Parent !!!")
+# class Child(Parent):
+#     def my_func(self):
+#         print("Child !!!")
+# def duck(obj):
+#     obj.my_func()
+
+# duck(Parent())
+# duck(Child())
+
+# from abc import ABC,abstractmethod
+# class Parent(ABC):
+#     @abstractmethod
+#     def test(self):
+#         pass
+# class Child(Parent):
+#     def test(self):
+#         print("Hello")
+
+# obj = Child()
+# obj.test()
+
+# class Test:
+#     def __str__(self):
+#         return "Hello"
+   
+
+# obj = Test()
+# print(obj)
+
+
+# class Test:
+#     def __len__(self):
+#         return 100
+    
+# obj = Test()
+# print(len(obj))
+
+
+# class Test:
+#     def __repr__(self):
+#         return "Test()"
+    
+# obj = Test()
+# print(repr(obj))
+
+
+# class Engine:
+#     def start(self):
+#         print("Engine Started !!!")
+
+# class Car:
+#     def __init__(self):
+#         self.engine = Engine()
+
+# class Bus:
+#     def __init__(self):
+#         self.engine = Engine()
+
+# obj1 = Car()
+# obj1.engine.start()
+
+# obj2 = Bus()
+# obj2.engine.start()
+
+# class Teacher:
+#     pass
+
+# class Student:
+#     def __init__(self,teacher):
+#         self.teacher = teacher
+
+# t = Teacher()
+# s = Student(t)
+
+
+# utility methods (static methods)
+# class Math:
+#     @staticmethod
+#     def add(num1,num2):
+#         return num1+num2
+    
+# print(Math.add(200,100))
+# obj = Math()
+# print(obj.add(200,100))
+
+
+# class Test:
+#     name="Hello"
+
+# obj1 = Test()
+# obj1.name = "Welcome"
+
+# print(Test.name)
+# print(obj1.name)
+
+# class
+# obj
+# inheritance (types)
+# class level data
+# encapsulation
+# polymorphism
+# abstract
+# __str__(), __repl__(),__len__()
+# static methods
+# super()
+# self
+
