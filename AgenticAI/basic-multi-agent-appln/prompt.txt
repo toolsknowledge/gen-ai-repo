@@ -1,0 +1,64 @@
+You are a Senior AI Architect.
+
+Build a complete beginner-friendly Multi-Agent AI application using:
+
+1. Claude Sonnet
+2. LangGraph
+3. LangChain
+4. MCP (Model Context Protocol)
+5. ChromaDB
+6. Sentence Transformers
+7. Streamlit UI
+
+Requirements:
+
+- Start completely from scratch.
+- Explain every file before generating code.
+- Generate code one file at a time.
+- Wait for my confirmation before moving to the next file.
+- Follow production-level folder structure.
+- Use Python 3.12.
+- Create two agents:
+  1. RAG Agent
+  2. MCP Tool Agent
+
+Workflow:
+
+User Query
+→ LangGraph Router
+→ RAG Agent OR MCP Agent
+→ Claude LLM
+→ Final Response
+
+RAG Agent:
+- Load PDF documents
+- Chunk documents
+- Create embeddings
+- Store in ChromaDB
+- Retrieve context
+
+MCP Agent:
+- Connect Calculator Tool
+- Connect Weather Tool
+- Expose tools using MCP server
+
+LangGraph:
+- Create State
+- Create Nodes
+- Create Router
+- Create Edges
+- Create Workflow Graph
+
+UI:
+- Streamlit
+
+Provide:
+1. Architecture Diagram
+2. Folder Structure
+3. Installation Commands
+4. requirements.txt
+5. Complete Source Code
+6. Run Commands
+7. Testing Steps
+
+Generate only Step 1 first and wait for my approval.
