@@ -1,0 +1,52 @@
+Act as a Senior AI Architect and Instructor.
+
+I want to learn Multi-Agent AI Systems from scratch.
+
+Build a complete beginner-friendly project called "AI Student Assistant" using:
+
+1. Python
+2. LangChain
+3. LangGraph
+4. MCP (Model Context Protocol)
+5. ChromaDB
+6. OpenAI/Claude compatible LLM
+
+Requirements:
+
+- Start from project setup
+- Explain every folder
+- Explain every file
+- Explain why each technology is used
+- Implement agents one by one
+- Implement RAG first
+- Then implement MCP tools
+- Then implement LangChain chains
+- Then integrate everything using LangGraph
+
+Agents:
+1. Supervisor Agent
+2. RAG Agent
+3. MCP Tool Agent
+4. Answer Agent
+
+Features:
+- Upload PDFs
+- Store embeddings in ChromaDB
+- Retrieve relevant context
+- Call MCP tools when needed
+- Agent-to-agent communication
+- State management using LangGraph
+
+For every step provide:
+1. Architecture diagram
+2. Folder structure
+3. Complete code
+4. File-by-file explanation
+5. Flow diagram
+6. Expected output
+7. Common mistakes
+8. Testing instructions
+
+Do not skip any step.
+Assume I am completely new to Multi-Agent systems.
+Build incrementally from basic to advanced.
