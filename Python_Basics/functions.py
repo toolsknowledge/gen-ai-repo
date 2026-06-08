@@ -1,3 +1,81 @@
+# no parameters - no return type
+# def db_conn():
+#     username = "admin"
+#     password = "admin@123"
+#     res = "Login Success" if username=="admin" and password == "admin@123" else "Login Fail"
+#     print(res)
+
+# # call the function
+# db_conn()
+
+# with parameters - without return type
+# def db_conn(username,password):
+#     res = "Login Success" if username=="admin" and password == "admin@123" else "Login Fail"
+#     print(res)
+
+# db_conn("admin","admin@123")  
+
+# no para - with return type
+# def db_conn():
+#       username = "admin"
+#       password = "admin@123"
+#       res = "Login Success" if username=="admin" and password == "admin@123" else "Login Fail"
+#       return res
+
+# x = db_conn()
+# print(x)
+
+# with para - with return type
+# def db_conn(username,password):
+#     res = "Login Success" if username=="admin" and password == "admin@123" else "Login Fail"
+#     return res    
+
+# x = db_conn("admin","admin@12")
+# print(x)
+
+# square of a number (4 types)
+
+
+# default parameters
+# def test_func(param1=100,param2=200):
+#     print(param1,param2)
+
+# test_func()
+# test_func(1000,2000)
+# test_func(param2=20000)
+# test_func(param1=10000)
+# test_func(None)
+# test_func(param1=20000,param2=None)
+
+
+# def test_func(param1,param2,param3="Hello",param4="welcome"):
+#     print(param1,param2,param3,param4)
+
+# test_func(None,None,None,None)
+# test_func(param4=400,param1=100,param3=300,param2=200)
+# test_func(None,None)
+# test_func(param2=100,param1=200)
+# test_func() #TypeError: test_func() missing 2 required positional arguments: 'param1' and 'param2'
+# test_func(100,200)
+
+# Note : all the default parameters are at the end of function declaration
+# def test_func(x,z,y=10,a=20):
+#     pass
+
+# variable-length arguments
+# def test_func(*param1):
+#     print(param1)
+
+# test_func(10)
+# test_func(10,20,30,40,50)
+# test_func("Hello","Welcome")
+
+
+
+
+
+
+
 # Function
 # particular business logic called as Function
 #       (or)
@@ -113,8 +191,8 @@
 # def test_func(**param1,**param2):
 #     pass
                                                             
-def test_func(param1,param2,param3="Hello",param4="welcome",*param5,**param6):
-    print(param1,param2,param3,param4,param5,param6)
+# def test_func(param1,param2,param3="Hello",param4="welcome",*param5,**param6):
+#     print(param1,param2,param3,param4,param5,param6)
 
 # test_func(10,20,30,40,50,60,70,80,90,name="Samba")
 # test_func(param1=10,param2=20)
