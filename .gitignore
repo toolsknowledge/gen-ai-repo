@@ -17,7 +17,7 @@ env/
 *.pt
 
 # Datasets
-data/
+
 dataset/
 
 # VS Code
