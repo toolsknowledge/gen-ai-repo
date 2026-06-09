@@ -1,0 +1,43 @@
+# ─────────────────────────────────────────────
+#  AI Student Assistant – Python dependencies
+#  No strict version pins – pip resolves compatible set automatically.
+# ─────────────────────────────────────────────
+
+# LangChain core + community integrations
+langchain
+langchain-core
+langchain-community
+langchain-anthropic
+langchain-chroma
+
+# LangGraph – agent orchestration / state machine
+langgraph
+
+# Anthropic SDK (Claude)
+anthropic
+
+# Vector database
+chromadb
+
+# PDF loading
+pymupdf           # fitz – fast PDF parser
+pypdf             # fallback PDF reader
+
+# Embeddings (local, free – no API key needed)
+sentence-transformers
+
+# MCP (Model Context Protocol)
+mcp
+
+# Environment / config
+python-dotenv
+pydantic>=2.0
+pydantic-settings
+
+# Utilities
+rich              # pretty terminal output
+httpx             # async HTTP
+
+# Testing
+pytest
+pytest-asyncio
