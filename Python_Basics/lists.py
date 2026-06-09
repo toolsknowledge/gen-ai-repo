@@ -105,3 +105,14 @@
 # list1 = [x for x in range(10) if x%2 == 0]
 # print(list1)
 
+
+"""
+   class list:
+    ---
+    ---
+    def __init__(self, str):
+        for loop
+        return list
+"""
+l1 = list("Python")
+print(l1)
