@@ -70,6 +70,67 @@
 # test_func(10,20,30,40,50)
 # test_func("Hello","Welcome")
 
+# Note : we are unable to pass two variable-length parameters
+# def test_func(*param1,*param2):
+#     pass
+
+# def test_func(param1,param2="Hello",*param3):
+#     print(param1,param2,param3)
+
+# test_func(10,20,30,40,50,60,70,80,90,100)
+# test_func(param1=100,param2=200,param3=(10,20))
+
+
+# def test_func(**param1):
+#     print(param1)
+
+# test_func(name="Samba",age=40)
+
+
+# def test_func(param1,param2="Hello",*param3,**param4):
+#     print(param1, param2, param3, param4)
+
+# test_func(10,20,30,40,50,name="Samba",age=40)
+
+# tuple - () store multiple values
+# {} -- key & value pairs
+
+
+
+# lambda
+# res = lambda num1: num1*num1
+# x = res(10)
+# print(x)
+
+# res = lambda num1,num2: num1+num2
+# x = res(200,100)
+# print(x)
+
+"""
+    map() - manipulate every list element
+                map()
+    [1,2,3,4,5] --> [10,20,30,40,50]
+"""
+
+# res = list(map(lambda num1:num1*num1, [1,2,3,4,5]))
+# print(res)
+
+# res = list(map(lambda num1,num2:num1+num2,[1,2,3],[10,11,12]))
+# print(res)
+
+
+# [100,200] [10,20]  --> [90,180]
+# [1,2,3] [4,5,6] [7,8,9] --> [12,15,18]
+
+
+# res = list( filter(lambda num1:num1%2 == 0,[1,2,3,4,5]) )
+# print(res)
+
+# [1,2,3,4,5] = 15  reduce()
+from functools import reduce
+res = reduce(lambda num1,num2:num1+num2,[1,2,3,4,5])
+print(res)
+
 
 
 
