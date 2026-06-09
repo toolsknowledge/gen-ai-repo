@@ -1,0 +1,30 @@
+# Environment
+.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Data (never commit the DB or uploaded PDFs)
+data/chroma_db/
+data/pdfs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# HuggingFace model cache (optional – large files)
+# ~/.cache/huggingface/
