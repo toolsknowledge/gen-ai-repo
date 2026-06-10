@@ -106,13 +106,88 @@
 # print(list1)
 
 
-"""
-   class list:
-    ---
-    ---
-    def __init__(self, str):
-        for loop
-        return list
-"""
-l1 = list("Python")
-print(l1)
+# list1 = list("Python")
+# print(list1)            # ['P', 'y', 't', 'h', 'o', 'n']
+# Py (+) (-)
+# on (+) (-)
+# Reverse (::-1) / reverse()
+
+# filter() - apply conditions
+# map() - manipulate every element
+# reduce() - sum of list elements
+
+# from functools import reduce
+# evens = filter(lambda num1:num1%2==0,[1,2,3,4,5]) # [2,4]
+# squares = map(lambda num1:num1*num1,evens) # [4,16]
+# res = reduce(lambda num1,num2:num1+num2,squares) # 20
+# print(res)
+
+# remove duplicates
+# nums = [1,2,1,2,"Hello","hello"]
+# res = list(set(nums))
+# print(res)
+
+# count() - 1--> 2. 2 --> 2
+# print(nums.count(1))
+# print(nums.count(2))
+# print(nums.count("Hello"))
+
+nums = [1,2,3,2,4,5,1]
+# [1,2]
+# display only duplicates
+# print(list(set([x for x in nums if nums.count(x)>1])))
+# [1, 2, 2, 1] {1, 2}
+
+
+# nums = [1,2,3,2,4,5,1,5]
+# list1 = []
+# for x in nums :
+#     if nums.count(x)>1:
+#       list1.append(x)
+#       print(set(list1))
+
+
+# nums = [10,40,5,70] # [5,10,40,70] sort() 1st 2nd last 2nd last
+# max
+# find the 2nd max element
+# min
+# 2nd min element
+# nums.sort()
+# print("Max Element : ",nums[-1])
+# print("2nd Max Element :",nums[-2])
+# print("Min Element :",nums[0])
+# print("2nd Min Element :",nums[1])
+
+# list1 = [10,20]
+# list2 = [30,40]
+
+# list1.extend(list2)
+# print(list1) # [10,20,30,40]
+
+# list1.append(list2)
+# print(list1) # [10,20,[30,40]]
+
+# list1 = [10]
+# print(list1 * 3)
+
+# list2 = [10,20,30]
+# print(list2 * 2)
+
+# list3 = [[]]
+# print(list3 * 3)
+
+# shallow copy
+# copy() function
+# list1 = [[1,2],[3,4]]
+# list2 = list1.copy()
+# list1[0][0] = 100
+# print(list2)
+
+# deepcopy
+# import copy
+# from copy import deepcopy
+# list1 = [[1,2],[3,4]]
+# list2 = deepcopy(list1)
+# list1[0][0] = 100
+# print(list2)
+
