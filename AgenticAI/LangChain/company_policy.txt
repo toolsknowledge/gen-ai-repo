@@ -1,0 +1,3 @@
+Employees are allowed 12 casual leaves per year.
+Employees are allowed 10 sick leaves per year.
+Work from home is allowed 2 days per week.
