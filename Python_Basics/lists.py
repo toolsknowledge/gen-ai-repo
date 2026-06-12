@@ -143,12 +143,23 @@
 # print( list(set( [x for x in nums if nums.count(x)>1] )) ) 
 
 # unpacking
-list1 = [10,20,30,40,50]
+# list1 = [10,20,30,40,50]
 
 # e1,e2,e3,e4,e5 = list1
 # print(e1,e2,e3,e4,e5)
 
-e1,e2,*e3 = list1
-print(e3)
+# e1,e2,*e3 = list1
+# print(e3)
+
+
+# list1 = [10,20,30,40,50]
+
+# a,b,c,d,e = list1
+# print(a,b,c)
+
+# list1 = [10,20,30,40,50]
+# e1,*e2,e3 = list1 #[20,30,40]
+# x,*y = e2
+# print(y)
 
 
